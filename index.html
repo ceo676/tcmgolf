@@ -3,227 +3,894 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCM GOLF MEMBERSHIP | 일본 5개 지역 30개 골프장 평생 이용권</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>서수연 프로 숏게임 레슨 상세 정보</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f1f5f9; color: #0f172a; }
-        .bg-golf-green { background-color: #064e3b; }
-        .text-gold { color: #fbbf24; }
-        .border-gold { border-color: #fbbf24; }
-        .curriculum-step { position: relative; padding-left: 2rem; border-left: 2px solid #e2e8f0; }
-        .curriculum-step::before { content: ''; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: #064e3b; border: 3px solid #fff; }
-        .highlight-box { border-left: 4px solid #fbbf24; background: #fffbeb; }
+        
+        :root {
+            --primary-dark: #0a0f0d;
+            --primary-green: #10b981;
+            --deep-green: #064e3b;
+            --gold-light: #F9F295;
+            --gold-main: #D4AF37;
+            --gold-dark: #aa8a2e;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--primary-dark);
+            color: #f1f5f9;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Gold Gradient Text */
+        .gold-text {
+            background: linear-gradient(135deg, var(--gold-main) 0%, var(--gold-light) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-main);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .pulse-gold { animation: pulse-gold 2s infinite; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--primary-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--deep-green); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-green); }
+
+        /* Notification Toast */
+        @keyframes slideInUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .notification-toast {
+            animation: slideInUp 0.5s ease-out;
+        }
+
+        /* Counter Section Background */
+        .counter-bg {
+            background: radial-gradient(circle at center, #064e3b 0%, #0a0f0d 100%);
+        }
+
+        /* 3D Button Style */
+        .btn-3d {
+            transition: all 0.2s;
+            box-shadow: 0 6px 0 var(--gold-dark);
+        }
+        .btn-3d:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 var(--gold-dark);
+        }
+
+        /* Table Styling */
+        .compare-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+        .compare-table td, .compare-table th { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
     </style>
 </head>
-<body class="max-w-md mx-auto bg-white shadow-2xl">
+<body class="antialiased">
 
-    <!-- 1. 헤드라인 섹션 (이미지 업데이트 완료) -->
-    <header class="relative h-[480px] bg-golf-green text-white flex flex-col justify-end p-8 overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://rlaeodn1015-oss.github.io/ssnim-lesson/images/seosuyeon.jpg" alt="서수연 프로 레슨" class="w-full h-full object-cover object-top">
+    <!-- [NAVBAR] -->
+    <nav class="fixed w-full z-[1000] bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-3xl font-black gold-text tracking-tighter">TCM GOLF</span>
+                <span class="hidden md:block text-[10px] bg-emerald-600 px-2 py-0.5 rounded text-white font-bold uppercase tracking-widest">Premium</span>
+            </div>
+            <div class="hidden lg:flex gap-10 font-bold text-sm uppercase tracking-widest text-slate-400">
+                <a href="#definition" class="hover:text-gold-main transition-colors">Definition</a>
+                <a href="#value" class="hover:text-gold-main transition-colors">Core Value</a>
+                <a href="#structure" class="hover:text-gold-main transition-colors">Membership</a>
+                <a href="#regions" class="hover:text-gold-main transition-colors">Regions</a>
+                <a href="#trust" class="hover:text-gold-main transition-colors">Trust</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:010-2599-1095" class="hidden md:block text-emerald-400 font-black text-sm">📞 010.2599.1095</a>
+                <a href="#pricing" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full font-black text-sm transition-all shadow-lg shadow-emerald-900/40">상담 신청</a>
+            </div>
         </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#064e3b] via-[#064e3b]/30 to-transparent"></div>
-        <div class="relative z-10 space-y-4">
-            <div class="inline-block border border-gold px-2 py-0.5 text-gold text-[10px] font-black tracking-[0.3em] mb-1 uppercase">Field Short Game Master</div>
-            <h1 class="text-[34px] font-black leading-tight tracking-tighter">
-                스크린 70타,<br>
-                <span class="text-gold">필드 100타?</span>
+    </nav>
+
+    <!-- [FLOATING UI: REAL-TIME NOTIFICATION] -->
+    <div id="toast-container" class="fixed bottom-24 left-6 z-[2000] space-y-3 pointer-events-none">
+        <!-- JS will inject toasts here -->
+    </div>
+
+    <!-- [FLOATING UI: CTAs] -->
+    <div class="fixed bottom-8 right-6 z-[2000] flex flex-col gap-4">
+        <div class="flex items-center gap-3 justify-end">
+            <div class="bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-[11px] text-emerald-400 font-bold animate-pulse shadow-2xl">
+                가입 가능 여부 확인중...
+            </div>
+            <a href="tel:010-2599-1095" class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+        <a href="http://pf.kakao.com/_xcxhFbs/chat" target="_blank" class="w-16 h-16 bg-[#FEE500] text-[#3c1e1e] rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform pulse-gold">
+            <i class="fa-solid fa-comment"></i>
+        </a>
+    </div>
+
+    <!-- [SECTION 1: HERO] -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Video/Image Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&q=100&w=2000" class="w-full h-full object-cover opacity-40" alt="Premium Golf Course">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f0d]/80 to-[#0a0f0d]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <!-- 실시간 시청자 알림 -->
+            <div class="inline-flex items-center gap-3 glass-card px-6 py-2 mb-10 border-white/10 rounded-full">
+                <span class="flex h-3 w-3 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
+                <p class="text-sm font-bold tracking-tight">현재 <span id="hero-viewers" class="text-emerald-400">24</span>명이 이 페이지를 보고 있습니다</p>
+            </div>
+
+            <h2 class="text-emerald-500 font-black tracking-[0.3em] text-sm md:text-lg mb-6 uppercase">TCM GOLF MEMBERSHIP</h2>
+            <h1 class="text-4xl md:text-8xl font-black leading-[1.1] mb-8">
+                일본 전역 30개 골프장을<br>
+                <span class="gold-text">회원가로 평생</span> 이용하는<br>
+                <span class="relative">
+                    프리미엄 회원권
+                    <svg class="absolute -bottom-4 left-0 w-full" height="10" viewBox="0 0 400 10" fill="none"><path d="M2 8C50 3 150 3 400 8" stroke="#D4AF37" stroke-width="4" stroke-linecap="round"/></svg>
+                </span>
             </h1>
-            <div class="h-1.5 w-14 bg-gold"></div>
-            <p class="text-lg font-light opacity-90 leading-relaxed">
-                문제는 <span class="font-bold text-white italic">‘잔디’</span>입니다.<br>
-                실전에 필요한 건 예쁜 스윙이 아니라<br>
-                환경에 반응하는 <span class="font-bold text-gold underline underline-offset-4 decoration-2">‘적응력’</span>입니다.
-            </p>
-        </div>
-    </header>
-
-    <!-- 2. 프로필 및 신뢰 지표 -->
-    <section class="bg-white px-8 py-12 flex flex-col gap-6 border-b border-gray-100">
-        <div class="flex items-center gap-5">
-            <div class="w-16 h-1 bg-golf-green"></div>
-            <p class="text-xs font-black text-golf-green tracking-widest uppercase italic">The Instructor</p>
-        </div>
-        <div class="space-y-2">
-            <h3 class="text-3xl font-black text-slate-900 tracking-tight">서수연 프로</h3>
-            <p class="text-sm font-bold text-gray-400 italic">"필드에서 실수하지 않는 실전 기술만 가르칩니다."</p>
-        </div>
-        <div class="grid grid-cols-3 gap-2 pt-4">
-            <div class="bg-gray-50 p-4 rounded-2xl text-center">
-                <div class="text-lg font-black text-golf-green">1,000+</div>
-                <div class="text-[9px] text-gray-400 font-bold uppercase mt-1">누적 레슨</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-2xl text-center">
-                <div class="text-lg font-black text-golf-green">-8.5타</div>
-                <div class="text-[9px] text-gray-400 font-bold uppercase mt-1">평균 감소</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-2xl text-center">
-                <div class="text-lg font-black text-golf-green">100%</div>
-                <div class="text-[9px] text-gray-400 font-bold uppercase mt-1">수강 만족</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. 문제 정의 -->
-    <section class="p-8 space-y-8 bg-gray-50">
-        <div class="text-left space-y-1">
-            <h2 class="text-xl font-black text-slate-800">이런 경험, <span class="text-red-500 underline decoration-red-200">반드시 해결</span>해 드립니다.</h2>
-            <p class="text-xs text-gray-400 font-medium tracking-tight">숏게임을 정복해야 비로소 라베가 보입니다.</p>
-        </div>
-        <div class="space-y-3">
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
-                <i class="fas fa-exclamation-triangle text-red-400 mt-1"></i>
-                <p class="text-sm text-gray-600 font-bold leading-relaxed">연습장 매트에서는 완벽한데,<br>필드 잔디 위에만 서면 무너지는 분</p>
-            </div>
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
-                <i class="fas fa-exclamation-triangle text-red-400 mt-1"></i>
-                <p class="text-sm text-gray-600 font-bold leading-relaxed">거리감이 맞지 않아 샷이 짧거나 길어져<br>스코어 대부분을 잃고 있는 분</p>
-            </div>
-            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
-                <i class="fas fa-exclamation-triangle text-red-400 mt-1"></i>
-                <p class="text-sm text-gray-600 font-bold leading-relaxed">그린 주변 어프로치나 벙커만 보면<br>불안함에 입스가 오시는 분</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. 실전 마스터 커리큘럼 (코드 기반 상세화) -->
-    <section class="p-8 py-16 space-y-14">
-        <div class="text-center space-y-2">
-            <h2 class="text-2xl font-black text-slate-900 italic tracking-tighter uppercase">Practical Curriculum</h2>
-            <p class="text-[11px] text-gray-400 font-bold tracking-[0.2em] uppercase">서수연 프로의 숏게임 최적화 솔루션</p>
-        </div>
-
-        <!-- Part 1 -->
-        <div class="space-y-8">
-            <div class="flex items-center gap-3">
-                <span class="bg-blue-600 text-white text-[10px] font-black px-2.5 py-1 rounded-md">Step 01</span>
-                <h4 class="text-xl font-black text-slate-800 tracking-tight">Indoor: 감각 복구 <span class="text-sm font-medium text-blue-500 font-sans ml-1">@판교 백야드</span></h4>
-            </div>
-            <div class="space-y-6 ml-2">
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">뒤땅/탑볼 정밀 컨택 교정</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">잘못된 임팩트 구간과 손목의 쓰임을 정밀 분석하여<br>어떤 라이에서도 깨끗한 컨택을 만드는 기초 공사</p>
-                </div>
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">20m 이내 초밀착 거리감 습득</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">스코어를 가장 많이 잃는 짧은 거리의 감각을<br>몸에 익혀 홀컵에 붙이는 능력을 극대화</p>
-                </div>
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">퍼터 방향성 & 에이밍 정렬</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">눈의 착시를 방지하는 올바른 에이밍 법과<br>일관성 있는 스트로크 궤도 형성</p>
-                </div>
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">벙커 탈출 메커니즘의 완벽 이해</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">모래의 저항을 이용해 한 번에 탈출하는<br>벙커 샷의 물리적 원리와 셋업 학습</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Part 2 -->
-        <div class="space-y-8 pt-6">
-            <div class="flex items-center gap-3">
-                <span class="bg-golf-green text-white text-[10px] font-black px-2.5 py-1 rounded-md">Step 02</span>
-                <h4 class="text-xl font-black text-slate-800 tracking-tight">Outdoor: 실전 마스터 <span class="text-sm font-medium text-golf-green font-sans ml-1">@용인 숏게임힐스</span></h4>
-            </div>
-            <div class="space-y-6 ml-2">
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">30~90m 웨지 컨트롤 (런/캐리 비율)</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">거리에 따른 클럽 선택과 탄도 조절,<br>핀 위치에 따라 공을 세우거나 굴리는 전략적 샷</p>
-                </div>
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">경사지 트러블샷 대응 셋업</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">오르막, 내리막, 발끝 라이 등 필드 특유의<br>다양한 경사면에서 실수 없는 셋업 공식</p>
-                </div>
-                <div class="curriculum-step border-l-gold">
-                    <p class="text-[15px] font-black text-golf-green italic">그린 경사 분석 & 실전 퍼팅 루틴</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-bold">3퍼트를 방지하는 리듬감 형성 및<br>착시를 이겨내고 정확하게 라인을 읽는 법</p>
-                </div>
-                <div class="curriculum-step">
-                    <p class="text-[15px] font-black text-slate-800">실전 코스 매니지먼트 전략</p>
-                    <p class="text-xs text-gray-500 mt-1.5 leading-relaxed font-medium">위험한 상황을 피하고 확률 높은 선택을 하는<br>고수들의 필드 플레이 전략 설계</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. 독보적인 혜택 -->
-    <section class="p-8 bg-slate-900 text-white rounded-t-[48px] space-y-10">
-        <div class="text-center space-y-1">
-            <p class="text-gold text-[11px] font-black tracking-widest uppercase">Premium Privilege</p>
-            <h3 class="text-2xl font-bold italic tracking-tight">참여자에게만 드리는 압도적 혜택</h3>
-        </div>
-        
-        <div class="grid grid-cols-1 gap-5">
-            <div class="flex items-center gap-5 bg-white/5 p-5 rounded-3xl border border-white/10 shadow-inner">
-                <div class="text-3xl">✈️</div>
-                <div class="space-y-1">
-                    <h5 class="text-base font-black text-emerald-400 italic">입장료 지원</h5>
-                    <p class="text-[11px] text-gray-400 font-medium leading-relaxed">2인 동반 신청 시 입장료 2만원 지원<br>(시즌 한정 혜택)</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-5 bg-white/5 p-5 rounded-3xl border border-white/10 shadow-inner">
-                <div class="text-3xl">💎</div>
-                <div class="space-y-1">
-                    <h5 class="text-base font-black text-emerald-400 italic">현금성 포인트 즉시 적립</h5>
-                    <p class="text-[11px] text-gray-400 font-medium leading-relaxed">스승님 전용 앱 결제 및 활동 시<br>차기 레슨에서 사용 가능한 포인트 증정</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-5 bg-white/5 p-5 rounded-3xl border border-white/10 shadow-inner">
-                <div class="text-3xl">💯</div>
-                <div class="space-y-1">
-                    <h5 class="text-base font-black text-emerald-400 italic">100% 결과 만족 보장제</h5>
-                    <p class="text-[11px] text-gray-400 font-medium leading-relaxed">레슨 결과 불만족 시 <br>투명한 환불 정책 운영</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. 레슨 개요 요약 -->
-    <section class="p-8 bg-white space-y-8">
-        <div class="p-8 rounded-[36px] bg-gray-50 border border-gray-200 space-y-6 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-gold text-white px-5 py-1.5 rounded-bl-2xl font-black text-[10px] tracking-widest uppercase">Seasonal Offer</div>
-            <h4 class="text-center font-black text-slate-800 text-xl tracking-tight">SHORT-GAME PROGRAM</h4>
             
-            <div class="space-y-4">
-                <div class="flex justify-between items-end border-b border-gray-100 pb-4">
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Pricing</span>
-                    <span class="text-2xl font-black text-golf-green italic">220,000<span class="text-sm font-normal text-gray-400 ml-1 not-italic">원</span></span>
-                </div>
-                <div class="flex justify-between items-start border-b border-gray-100 pb-4">
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Class Type</span>
-                    <span class="text-sm font-black text-slate-800 text-right">2인 1팀 소수정예 밀착 레슨<br><span class="text-[10px] text-blue-500">(개인별 데이터 분석 가이드 포함)</span></span>
-                </div>
-                <div class="flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-bold uppercase tracking-widest">Duration</span>
-                    <span class="text-sm font-black text-slate-800 underline decoration-gold decoration-4 underline-offset-2 italic">총 120분 집중 마스터 과정</span>
-                </div>
+            <p class="text-lg md:text-3xl font-light text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                골프를 예약하는 것이 아니라,<br class="md:hidden">
+                일본 골프의 정점을 <span class="font-black text-white underline decoration-emerald-500 underline-offset-8">‘보유’</span>하는 방식
+            </p>
+
+            <p class="text-xl md:text-3xl font-black mb-16 gold-text">
+                하나의 회원권으로 일본 5개 지역 4계절 무제한 라운드
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#pricing" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white text-2xl font-black py-6 px-16 rounded-2xl transition-all shadow-2xl shadow-emerald-900/50 btn-3d">
+                    👉 회원권 상담 신청
+                </a>
+                <a href="tel:010-2599-1095" class="w-full md:w-auto glass-card border-white/20 text-white text-2xl font-black py-6 px-16 rounded-2xl hover:bg-white/10 transition-all">
+                    지금 가입 가능 여부 확인
+                </a>
+            </div>
+
+            <div class="mt-16 flex justify-center gap-10 text-slate-500 font-bold text-sm tracking-widest uppercase">
+                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">30+</span> Courses</div>
+                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">05</span> Regions</div>
+                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">∞</span> Lifetime</div>
             </div>
         </div>
 
-        <!-- 최종 안내 및 연락처 -->
-        <div class="text-center space-y-8 py-6">
-            <p class="text-[15px] font-black text-slate-800 leading-relaxed italic">
-                "연습장 10시간보다 강력한 120분의 실전 경험,<br>
-                올해 라베는 숏게임에서 결정됩니다."
-            </p>
-            
-            <div class="py-6 border-y-2 border-slate-100 space-y-3">
-                <p class="text-[10px] text-gray-400 font-black tracking-[0.4em] uppercase">Reservation</p>
-                <div class="flex items-center justify-center gap-3 text-lg font-black text-blue-600">
-                    <i class="fab fa-kakao text-2xl text-[#3A1D1D]"></i>
-                    <span>앱 채팅: <span class="underline underline-offset-4">[스승님]</span> 채팅주세요!</span>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- [SECTION 2: DEFINITION - THE CORE ESSENCE] -->
+    <section id="definition" class="py-32 bg-[#0a0f0d] relative overflow-hidden px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="lg:w-1/2">
+                    <span class="text-emerald-500 font-bold tracking-widest mb-4 block">WHAT IS TCM?</span>
+                    <h3 class="text-4xl md:text-6xl font-black mb-10 leading-tight">
+                        TCM 회원권,<br>그 본질은 단 하나입니다.
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
+                                <i class="fa-solid fa-check text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black mb-2 text-white">일본 5개 지역 30개 골프장 이용권</h4>
+                                <p class="text-slate-400 text-lg">단순한 티타임 확보가 아닙니다. 일본 전역의 명문 필드를 내 집 앞마당처럼 회원가/준회원가로 이용하는 실질적 권리입니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
+                                <i class="fa-solid fa-check text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black mb-2 text-white">올인원 통합 서비스 제공</h4>
+                                <p class="text-slate-400 text-lg">골프장 예약은 기본, 명품 숙소와 전용 차량 송영, 현지 한국인 안내 서비스까지 완벽하게 결합된 통합 시스템을 누리십시오.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
+                                <i class="fa-solid fa-check text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black mb-2 text-white">평생 지속되는 라이프스타일</h4>
+                                <p class="text-slate-400 text-lg">단발성 패키지 여행의 피로함에서 벗어나십시오. 한번의 자산 보유로 평생 반복 이용 가능한 골프 라이프 시스템이 구축됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-[11px] text-gray-400 font-medium">상담은 무료입니다!.</p>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative z-10 glass-card p-4 border-white/10 overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.2)]">
+                        <img src="https://images.unsplash.com/photo-1592919016324-5a700e322cd5?auto=format&fit=crop&q=80&w=800" class="rounded-2xl" alt="TCM Experience">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
+                            <p class="text-2xl font-black">“투어는 소비지만, 회원권은 자산이다”</p>
+                        </div>
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 blur-[80px] rounded-full"></div>
+                    <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-gold-main/10 blur-[100px] rounded-full"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-100 py-12 text-center opacity-40 grayscale flex flex-col items-center gap-3">
-        <i class="fas fa-golf-ball text-4xl"></i>
-        <p class="text-[10px] font-black tracking-[0.5em] uppercase">SSNIM Golf Mastery Portfolio</p>
+    <!-- [SECTION 3: PAIN POINTS - WHY YOU NEED IT] -->
+    <section class="py-32 bg-[#0d1410] px-6">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h3 class="text-4xl md:text-6xl font-black mb-6">왜 회원권이 필요한가?</h3>
+            <p class="text-slate-400 text-xl">당신의 일본 골프가 여태껏 힘들었던 5가지 이유</p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-6">
+            <div class="glass-card p-10 flex flex-col items-center text-center group">
+                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-calendar-xmark"></i></div>
+                <h5 class="text-xl font-bold mb-4">예약 스트레스</h5>
+                <p class="text-slate-500 text-sm">갈 때마다 새로 알아보고 소통해야 하는 피로감</p>
+            </div>
+            <div class="glass-card p-10 flex flex-col items-center text-center group">
+                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h5 class="text-xl font-bold mb-4">불투명한 가격</h5>
+                <p class="text-slate-500 text-sm">성수기마다 치솟는 가격과 숙소 확보의 전쟁</p>
+            </div>
+            <div class="glass-card p-10 flex flex-col items-center text-center group">
+                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-lock"></i></div>
+                <h5 class="text-xl font-bold mb-4">이용의 한계</h5>
+                <p class="text-slate-500 text-sm">진짜 좋은 명문 골프장은 회원 아니면 입구 컷</p>
+            </div>
+            <div class="glass-card p-10 flex flex-col items-center text-center group">
+                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-route"></i></div>
+                <h5 class="text-xl font-bold mb-4">현지 이동 고충</h5>
+                <p class="text-slate-500 text-sm">공항-숙소-골프장간 복잡한 이동 수단 예약</p>
+            </div>
+            <div class="glass-card p-10 flex flex-col items-center text-center group">
+                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-chart-line-down"></i></div>
+                <h5 class="text-xl font-bold mb-4">경험의 불연속성</h5>
+                <p class="text-slate-500 text-sm">일회성 패키지로 끝나버리는 단기 골프 여행</p>
+            </div>
+        </div>
+
+        <div class="mt-20 bg-emerald-950/40 border border-emerald-500/30 p-12 rounded-[3rem] text-center max-w-5xl mx-auto">
+            <h4 class="text-3xl md:text-5xl font-black text-emerald-400 mb-6">회원권 하나로 이 모든 고민이 끝납니다.</h4>
+            <p class="text-slate-300 text-xl leading-relaxed">회원은 오직 골프에만 집중하고, 나머지는 TCM 시스템이 해결합니다.</p>
+        </div>
+    </section>
+
+    <!-- [SECTION 4: CORE VALUE - PREMIUM VALUE] -->
+    <section id="value" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h3 class="text-5xl font-black mb-6 gold-text underline decoration-gold-main underline-offset-[12px]">회원권 핵심 가치</h3>
+                <p class="text-slate-400 text-xl">비교할 수 없는 TCM만의 5대 압도적 혜택</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Value 1 -->
+                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                    <i class="fa-solid fa-plane-departure text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
+                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-earth-asia"></i></div>
+                    <h5 class="text-2xl font-black mb-6">일본 전역 완벽 커버</h5>
+                    <p class="text-slate-400 leading-relaxed mb-8">규슈, 히로시마, 오사카, 동경, 북해도까지 일본 주요 5개 거점의 30여 개 골프장을 자유롭게 교차 이용 가능합니다.</p>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Kyushu</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Osaka</span>
+                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Hokkaido</span>
+                    </div>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="glass-card p-12 flex flex-col relative overflow-hidden border-emerald-500/30">
+                    <i class="fa-solid fa-trophy text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
+                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-crown"></i></div>
+                    <h5 class="text-2xl font-black mb-6">일본 TOP 5 명문 필드</h5>
+                    <p class="text-slate-400 leading-relaxed mb-8">조난CC 등 일본 상위 5위권 명문 골프장 이용 권한이 포함되어 있습니다. 회원권 없이는 발조차 들일 수 없는 그곳에서 라운드하십시오.</p>
+                    <div class="mt-auto">
+                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 일본 TOP 명문 골프장 직영 계약</p>
+                    </div>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                    <i class="fa-solid fa-money-bill-trend-up text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
+                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-sack-dollar"></i></div>
+                    <h5 class="text-2xl font-black mb-6">압도적 가격 효율성</h5>
+                    <p class="text-slate-400 leading-relaxed mb-8">일반 패키지 투어 대비 1회 라운드 시 최대 200만 원 이상의 비용 절감이 가능합니다. 자주 갈수록 더 큰 이득이 되는 구조입니다.</p>
+                    <div class="mt-auto">
+                        <p class="text-gold-main font-black text-sm tracking-tighter">✔ 반복 이용 시 1년 내 회원권 금액 회수 가능</p>
+                    </div>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                    <i class="fa-solid fa-car-side text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
+                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-gears"></i></div>
+                    <h5 class="text-2xl font-black mb-6">완전 자동 운영 케어</h5>
+                    <p class="text-slate-400 leading-relaxed mb-8">공항 도착부터 귀국까지, 전용 차량 송영과 숙소, 골프장 체크인이 모두 자동화되어 제공됩니다. 당신은 오직 골프백만 챙기십시오.</p>
+                    <div class="mt-auto">
+                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 현지 한국인 가이드 및 전용 차량 상시 대기</p>
+                    </div>
+                </div>
+
+                <!-- Value 5 -->
+                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                    <i class="fa-solid fa-umbrella-beach text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
+                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-palette"></i></div>
+                    <h5 class="text-2xl font-black mb-6">라이프스타일의 확장</h5>
+                    <p class="text-slate-400 leading-relaxed mb-8">골프 그 이상을 즐기십시오. 지역별 엄선된 맛집, 관광 코스, 쇼핑 인프라가 결합되어 완벽한 일본 여행의 정수를 선사합니다.</p>
+                    <div class="mt-auto">
+                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 사계절(벚꽃, 단풍, 온천) 테마 라운드 제공</p>
+                    </div>
+                </div>
+
+                <!-- Value 6 (The Asset) -->
+                <div class="bg-emerald-950/20 p-12 rounded-[2rem] border-2 border-emerald-500 flex flex-col items-center justify-center text-center">
+                    <h5 class="text-3xl font-black text-white mb-6">투어는 소비지만,<br>회원권은 자산입니다.</h5>
+                    <p class="text-emerald-400 font-black text-4xl mb-6">ASSET</p>
+                    <a href="#pricing" class="bg-white text-black px-8 py-3 rounded-full font-black text-sm hover:scale-105 transition-transform">상담하고 자산 보유하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 5: STRUCTURE - PRICING & TERMS] -->
+    <section id="structure" class="py-32 bg-[#050807] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-emerald-500 font-bold mb-4 block tracking-widest">MEMBERSHIP PLAN</span>
+                <h3 class="text-4xl md:text-6xl font-black mb-6 italic italic">회원권 구성 및 파격 조건</h3>
+                <p class="text-slate-500 text-xl">이것이 "진짜 회원권"의 자격입니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
+                <!-- GOLD -->
+                <div class="relative group">
+                    <div class="absolute -top-6 right-10 bg-emerald-500 text-white font-black px-6 py-2 rounded-full text-sm z-20 animate-bounce">실시간 잔여 3좌</div>
+                    <div class="glass-card p-12 border-emerald-500/50 h-full relative overflow-hidden bg-gradient-to-br from-emerald-950/20 to-transparent">
+                        <div class="flex justify-between items-start mb-10">
+                            <div>
+                                <h4 class="text-4xl font-black gold-text mb-2">GOLD 회원권</h4>
+                                <p class="text-slate-400 font-bold">법인 및 단체 최고의 선택</p>
+                            </div>
+                            <div class="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center border border-emerald-500/30">
+                                <i class="fa-solid fa-users-gear text-4xl text-emerald-500"></i>
+                            </div>
+                        </div>
+                        <div class="text-6xl font-black text-white mb-10 tracking-tighter">2,970<span class="text-2xl font-normal text-slate-400 ml-2">만원</span></div>
+                        <ul class="space-y-6 mb-12">
+                            <li class="flex items-center gap-4 text-xl font-bold"><i class="fa-solid fa-circle-check text-emerald-400"></i> 무기명 4인 이용 (누구나)</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 이용 횟수 : 무제한</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 주중 / 주말 이용 가능</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 평생 회원 자격 보장</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 양도 및 양수 가능 (자산 가치)</li>
+                        </ul>
+                        <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-6 rounded-2xl text-center block text-2xl font-black transition-all btn-3d">상담 신청하기</a>
+                    </div>
+                </div>
+
+                <!-- SILVER -->
+                <div class="relative group">
+                    <div class="absolute -top-6 right-10 bg-slate-700 text-white font-black px-6 py-2 rounded-full text-sm z-20">실시간 잔여 4좌</div>
+                    <div class="glass-card p-12 border-white/10 h-full">
+                        <div class="flex justify-between items-start mb-10">
+                            <div>
+                                <h4 class="text-4xl font-black text-white mb-2">SILVER 회원권</h4>
+                                <p class="text-slate-400 font-bold">개인 및 소수 정예 최적화</p>
+                            </div>
+                            <div class="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10">
+                                <i class="fa-solid fa-user-check text-4xl text-slate-400"></i>
+                            </div>
+                        </div>
+                        <div class="text-6xl font-black text-white mb-10 tracking-tighter">1,980<span class="text-2xl font-normal text-slate-400 ml-2">만원</span></div>
+                        <ul class="space-y-6 mb-12">
+                            <li class="flex items-center gap-4 text-xl font-bold"><i class="fa-solid fa-circle-check text-emerald-400"></i> 기명 1인 + 무기명 3인</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 2인 플레이 가능 (커플/친구)</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 이용 횟수 : 무제한</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 평생 회원 자격 보장</li>
+                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 양도 및 양수 가능</li>
+                        </ul>
+                        <a href="tel:010-2599-1095" class="w-full bg-white text-black py-6 rounded-2xl text-center block text-2xl font-black transition-all hover:bg-slate-100">가입 가능 문의</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 핵심 전환 포인트: 이용 구조 -->
+            <div class="bg-emerald-950/40 p-12 rounded-[3rem] border border-emerald-500/30">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h5 class="text-3xl font-black mb-6">💡 핵심 전환 포인트</h5>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-10">
+                            TCM 회원권은 단순 제휴가 아닙니다. <br>
+                            직영 관리되는 <span class="text-white font-bold">5개 골프장은 회원가</span>로, <br>
+                            나머지 <span class="text-white font-bold">27개 프리미엄 골프장은 준회원가</span>로 이용하는 합리적인 이원 구조를 통해 만족도를 극대화했습니다.
+                        </p>
+                        <div class="flex gap-6">
+                            <div class="bg-emerald-900/50 p-6 rounded-2xl flex-1 text-center">
+                                <span class="text-4xl font-black gold-text">5곳</span>
+                                <p class="text-xs mt-2 font-bold uppercase tracking-widest text-emerald-400">Member Price</p>
+                            </div>
+                            <div class="bg-white/5 p-6 rounded-2xl flex-1 text-center border border-white/5">
+                                <span class="text-4xl font-black text-white">27곳</span>
+                                <p class="text-xs mt-2 font-bold uppercase tracking-widest text-slate-500">Associate Price</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-card p-6 text-center">
+                            <i class="fa-solid fa-infinity text-emerald-500 text-2xl mb-2"></i>
+                            <p class="font-bold text-sm">무제한 이용</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <i class="fa-solid fa-calendar-days text-emerald-500 text-2xl mb-2"></i>
+                            <p class="font-bold text-sm">주말 예약 가능</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <i class="fa-solid fa-user-group text-emerald-500 text-2xl mb-2"></i>
+                            <p class="font-bold text-sm">2인 플레이</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <i class="fa-solid fa-handshake text-emerald-500 text-2xl mb-2"></i>
+                            <p class="font-bold text-sm">양도/양수 가능</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 6: REGIONS DATA - NUMBERS DONT LIE] -->
+    <section id="regions" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h3 class="text-5xl font-black mb-6">일본 전역 인프라 데이터</h3>
+                <p class="text-slate-400 text-xl font-bold">5개 지역, 30개 골프장, 13개 호텔 직영 운영</p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-6">
+                <!-- Kyushu -->
+                <div class="glass-card p-8 group relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 opacity-10 group-hover:scale-125 transition-transform"><i class="fa-solid fa-map-location-dot text-8xl"></i></div>
+                    <h6 class="text-2xl font-black text-emerald-500 mb-6">규슈</h6>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">골프장</span>
+                            <span class="font-black text-xl text-white">9개</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">직영 호텔</span>
+                            <span class="font-black text-xl text-white">3곳</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hiroshima -->
+                <div class="glass-card p-8 group relative overflow-hidden">
+                    <h6 class="text-2xl font-black text-emerald-500 mb-6">히로시마</h6>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">골프장</span>
+                            <span class="font-black text-xl text-white">3개</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">직영 호텔</span>
+                            <span class="font-black text-xl text-white">3곳</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Osaka -->
+                <div class="glass-card p-8 group relative overflow-hidden border-emerald-500/50">
+                    <h6 class="text-2xl font-black text-emerald-500 mb-6 font-black italic">오사카 (핵심)</h6>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">골프장</span>
+                            <span class="font-black text-2xl text-emerald-400">13개</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">직영 호텔</span>
+                            <span class="font-black text-xl text-white">3곳</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tokyo -->
+                <div class="glass-card p-8 group relative overflow-hidden">
+                    <h6 class="text-2xl font-black text-emerald-500 mb-6">동경</h6>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">골프장</span>
+                            <span class="font-black text-xl text-white">5개</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">직영 호텔</span>
+                            <span class="font-black text-xl text-white">1곳</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hokkaido -->
+                <div class="glass-card p-8 group relative overflow-hidden">
+                    <h6 class="text-2xl font-black text-emerald-500 mb-6">북해도</h6>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2">
+                            <span class="text-slate-400">골프장</span>
+                            <span class="font-black text-xl text-white">6개</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">직영 호텔</span>
+                            <span class="font-black text-xl text-white">3곳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-3xl font-black italic">"총 30여 개 골프장과 13개 호텔 인프라를 독점 이용하십시오."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 7: FAMOUS COURSES - THE PRIDE] -->
+    <section class="py-32 bg-[#0d1410] px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-5xl font-black mb-24">회원권의 품격, 대표 골프장</h3>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Course 1 -->
+                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1592919016324-5a700e322cd5?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Jonan CC">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
+                        <span class="bg-emerald-600 text-white text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">JAPAN TOP 5</span>
+                        <h4 class="text-3xl font-black mb-4">조난 CC (城南)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">일본 최고 권위의 TOP 5 명문 필드. 정통 클래식 코스의 정수를 보여줍니다.</p>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Miwa CC">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
+                        <span class="bg-gold-main text-black text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">KOREA FIRST</span>
+                        <h4 class="text-3xl font-black mb-4">미와 CC (美和)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed text-emerald-400 font-bold">"한국 최초의 일본 회원권 탄생지" - 압도적 신뢰와 전통의 명단</p>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
+                    <img src="https://images.unsplash.com/photo-1610484198818-4720970a0491?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Asahikawa GC">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
+                        <span class="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">HOKKAIDO CORE</span>
+                        <h4 class="text-3xl font-black mb-4">아사히카와 GC</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">북해도의 시원한 자연을 품은 명문. 한여름에도 최상의 컨디션을 보장합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-16 text-2xl font-black gold-text">“회원 아니면 못 치는 골프장이 TCM에선 일상입니다.”</p>
+        </div>
+    </section>
+
+    <!-- [SECTION 8: PROCESS - SIMPLE FLOW] -->
+    <section class="py-32 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-4xl font-black mb-16">회원권 이용 흐름</h3>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+                <div class="flex-1 glass-card p-10 w-full">
+                    <span class="text-emerald-500 font-black text-2xl mb-4 block">01</span>
+                    <h6 class="text-xl font-black mb-2">원하는 지역 선택</h6>
+                    <p class="text-slate-500 text-sm">5개 거점 중 선택</p>
+                </div>
+                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
+                <div class="flex-1 glass-card p-10 w-full border-emerald-500/30">
+                    <span class="text-emerald-500 font-black text-2xl mb-4 block">02</span>
+                    <h6 class="text-xl font-black mb-2">예약 요청</h6>
+                    <p class="text-slate-500 text-sm">회원 전용 채널 이용</p>
+                </div>
+                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
+                <div class="flex-1 glass-card p-10 w-full">
+                    <span class="text-emerald-500 font-black text-2xl mb-4 block">03</span>
+                    <h6 class="text-xl font-black mb-2">현지 서비스 연동</h6>
+                    <p class="text-slate-500 text-sm">숙소/차량/안내 매칭</p>
+                </div>
+                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
+                <div class="flex-1 bg-emerald-600 p-10 rounded-[2rem] w-full shadow-2xl">
+                    <span class="text-white font-black text-2xl mb-4 block">04</span>
+                    <h6 class="text-xl font-black mb-2">바로 라운드</h6>
+                    <p class="text-emerald-100 text-sm">몸만 떠나는 골프</p>
+                </div>
+            </div>
+            <p class="mt-16 text-3xl font-black">“복잡한 준비 없이 바로 플레이”</p>
+        </div>
+    </section>
+
+    <!-- [SECTION 9: BENEFITS - FULL PACKAGE] -->
+    <section class="py-32 bg-[#050807] px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-5xl font-black mb-24 gold-text">회원권 포함 혜택 총망라</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6 p-8 glass-card">
+                        <i class="fa-solid fa-flag-checkered text-3xl text-emerald-500"></i>
+                        <span class="text-xl font-bold">전국 30개 명문 골프장 무제한 이용</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-8 glass-card">
+                        <i class="fa-solid fa-bed text-3xl text-emerald-500"></i>
+                        <span class="text-xl font-bold">특급 호텔 및 숙박 (조식 포함)</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-8 glass-card">
+                        <i class="fa-solid fa-van-shuttle text-3xl text-emerald-500"></i>
+                        <span class="text-xl font-bold">공항 ↔ 호텔 ↔ 골프장 송영 서비스</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6 p-8 glass-card">
+                        <i class="fa-solid fa-user-tie text-3xl text-emerald-500"></i>
+                        <span class="text-xl font-bold">현지 한국인 전담 직원 밀착 안내</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-8 glass-card border-emerald-500/50">
+                        <i class="fa-solid fa-building-shield text-3xl text-emerald-500"></i>
+                        <span class="text-xl font-bold italic">일본 법인 직접 운영 예약 시스템</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-8 bg-emerald-900/40 rounded-[2rem] border border-emerald-500/50">
+                        <h4 class="text-2xl font-black text-white italic">"현지 직영 운영의 차별화된 디테일"</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 10: COST ANALYSIS - THE ASSET ARGUMENT] -->
+    <section class="py-32 px-6 counter-bg relative">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-4xl font-black mb-16">비용 가치 강조 : 당신의 선택은?</h3>
+            <div class="flex flex-col lg:flex-row items-stretch gap-10">
+                <div class="flex-1 glass-card p-12 opacity-60">
+                    <h6 class="text-2xl font-bold mb-8 text-slate-500">일반 일본 골프 투어</h6>
+                    <p class="text-4xl font-black mb-10 text-slate-400">1회 약 200~300만원</p>
+                    <div class="space-y-4 text-slate-500 text-left">
+                        <p>✖ 갈 때마다 소멸되는 비용</p>
+                        <p>✖ 성수기 바가지 요금 감수</p>
+                        <p>✖ 예약 불확실성에 따른 스트레스</p>
+                    </div>
+                    <p class="mt-12 text-red-500 font-black">"사라지는 소비(Expense)"</p>
+                </div>
+                <div class="flex-1 glass-card p-12 border-emerald-500/50 relative overflow-hidden bg-emerald-950/10">
+                    <div class="absolute top-0 right-0 p-4 bg-emerald-600 text-white font-black text-xs uppercase tracking-widest">Recommended</div>
+                    <h6 class="text-2xl font-black mb-8 gold-text">TCM GOLF MEMBERSHIP</h6>
+                    <p class="text-4xl font-black mb-10 text-white">반복 이용 시 압도적 절감</p>
+                    <div class="space-y-4 text-left">
+                        <p class="text-emerald-400">✔ 10회 이용 시 회원권 금액 상쇄</p>
+                        <p class="text-emerald-400">✔ 자산 가치 상승 시 양도로 수익 창출</p>
+                        <p class="text-emerald-400">✔ 회원 전용 고정가로 평생 안정 이용</p>
+                    </div>
+                    <p class="mt-12 text-emerald-500 font-black text-2xl">"축적되는 자산(Asset)"</p>
+                </div>
+            </div>
+            <h4 class="mt-20 text-4xl font-black gold-text italic">“갈수록 돈 버는 구조입니다.”</h4>
+        </div>
+    </section>
+
+    <!-- [SECTION 11: LIFESTYLE - BEYOND GOLF] -->
+    <section class="py-32 px-6 bg-[#0a0f0d]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl animate-float"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Sightseeing"></div>
+                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl mt-12 animate-float" style="animation-delay: 1s"><img src="https://images.unsplash.com/photo-1580442151529-343f2f5e0e27?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Food"></div>
+                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl -mt-12 animate-float" style="animation-delay: 2s"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Shopping"></div>
+                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl animate-float" style="animation-delay: 3.5s"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Seasons"></div>
+                </div>
+                <div>
+                    <h3 class="text-5xl font-black mb-10 leading-tight">골프 이상의 경험,<br>진정한 럭셔리 라이프</h3>
+                    <ul class="space-y-8 text-xl">
+                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">01</span> 일본 주요 도심 관광 및 온천 힐링</li>
+                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">02</span> 엄선된 미슐랭 맛집 및 이자카야 연동</li>
+                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">03</span> 프리미엄 아울렛 및 편집샵 쇼핑 가이드</li>
+                        <li class="flex items-center gap-6 text-emerald-400 font-black"><span class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-black border border-white/10">★</span> 사계절 라운드 (벚꽃/단풍/겨울)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 12: TRUST - RELIABILITY] -->
+    <section id="trust" class="py-32 px-6 bg-[#050807] border-y border-white/5">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-5xl font-black mb-20">압도적 신뢰 요소</h3>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="glass-card p-10">
+                    <i class="fa-solid fa-landmark text-5xl text-emerald-500 mb-6 block"></i>
+                    <h6 class="text-xl font-black mb-4">일본 현지 법인 직접 운영</h6>
+                    <p class="text-slate-500 text-sm">에이전시가 아닌 현지 법인 직접 책임 관리 시스템</p>
+                </div>
+                <div class="glass-card p-10">
+                    <i class="fa-solid fa-certificate text-5xl text-emerald-500 mb-6 block"></i>
+                    <h6 class="text-xl font-black mb-4">정식 회원 증서 발급</h6>
+                    <p class="text-slate-500 text-sm">자산으로서의 가치를 증명하는 정식 회원 카드 및 증서</p>
+                </div>
+                <div class="glass-card p-10">
+                    <i class="fa-solid fa-car-on text-5xl text-emerald-500 mb-6 block"></i>
+                    <h6 class="text-xl font-black mb-4">직영 차량 서비스</h6>
+                    <p class="text-slate-500 text-sm">외부 하청이 아닌 TCM 전용 직영 차량 상시 운행</p>
+                </div>
+            </div>
+            
+            <div class="mt-24 p-12 glass-card border-emerald-500/30 inline-block text-left max-w-2xl">
+                <div class="flex items-center gap-8 mb-10">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" class="w-24 h-24 rounded-full border-2 border-emerald-500 object-cover" alt="VIP Team Leader">
+                    <div>
+                        <span class="text-emerald-500 font-bold uppercase tracking-widest text-xs mb-1 block">VIP 법인 총괄 팀장</span>
+                        <h5 class="text-3xl font-black text-white italic italic">김 대 우</h5>
+                        <p class="text-slate-400 text-sm font-bold tracking-widest mt-1 uppercase">Industry No.1 Specialist</p>
+                    </div>
+                </div>
+                <p class="text-slate-300 leading-relaxed italic text-lg">
+                    "TCM은 단순히 상품을 판매하지 않습니다. 우리는 고객의 소중한 휴식과 골프의 품격을 자산으로 만들어드리는 파트너입니다. 업계 1위의 전문성으로 당신의 라운드를 책임지겠습니다."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 13: FINAL CTA] -->
+    <section class="py-40 bg-emerald-950/20 relative overflow-hidden px-6 text-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80" class="w-full h-full object-cover opacity-20" alt="Final Banner">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h3 class="text-4xl md:text-7xl font-black mb-8 leading-tight">
+                골프를 예약하지 마세요<br>
+                골프장을 <span class="gold-text">‘보유’</span>하세요
+            </h3>
+            <p class="text-emerald-400 font-black text-2xl mb-12">지금 이 조건은 이번 기수 한정으로 마감됩니다.</p>
+            
+            <div class="flex flex-col gap-6 items-center">
+                <a href="#pricing" class="w-full max-w-md bg-emerald-600 hover:bg-emerald-500 text-white text-3xl font-black py-8 rounded-3xl shadow-2xl transition-all btn-3d">
+                    👉 회원권 상담 신청
+                </a>
+                <a href="tel:010-2599-1095" class="text-white font-bold underline underline-offset-8 decoration-emerald-500 text-xl">
+                    지금 가입 가능 여부 확인하기 (잔여 7구좌)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- [SECTION 14: FOOTER] -->
+    <footer class="bg-[#050807] text-slate-600 py-24 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="text-3xl font-black gold-text mb-6">TCM GOLF</div>
+                    <p class="text-sm leading-relaxed max-w-md">
+                        TCM GOLF MEMBERSHIP은 일본 전역의 명문 골프장 인프라와 특급 호텔 서비스를 직영 운영하는 글로벌 골프 멤버십 브랜드입니다. 우리는 고객의 여가 시간을 단순한 소비가 아닌 평생의 자산으로 전환해드립니다.
+                    </p>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Information</h6>
+                    <ul class="space-y-4 text-xs">
+                        <li>법인명: (주)투어클럽</li>
+                        <li>대표자: 박정호</li>
+                        <li>사업자번호: 145-88-00771</li>
+                        <li>본사: 용인시 수지구 광교 중앙로338 ,B동 809호 / A동 427호</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact & Link</h6>
+                    <ul class="space-y-4 text-xs">
+                        <li>대표번호: 010-2599-1095</li>
+                        <li>카카오채널: @http://pf.kakao.com/_xcxhFbs/chat</li>
+                        <li><a href="#" class="hover:text-white">이용약관</a></li>
+                        <li><a href="#" class="hover:text-white font-bold">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] tracking-widest uppercase font-bold">© 2025 TCM GOLF MEMBERSHIP. ALL RIGHTS RESERVED.</p>
+                <div class="flex gap-6 text-xl">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <p class="text-[12px] font-black italic gold-text">“투어는 소비지만, 회원권은 자산이다”</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // [1] 실시간 시청자 수 애니메이션
+        function animateViewers() {
+            const viewerEl = document.getElementById('hero-viewers');
+            let count = 24;
+            setInterval(() => {
+                const change = Math.floor(Math.random() * 5) - 2; // -2 to +2
+                count += change;
+                if(count < 15) count = 15;
+                if(count > 45) count = 45;
+                viewerEl.innerText = count;
+            }, 4000);
+        }
+
+        // [3] 실시간 알림 토스트 생성
+        const toastTexts = [
+            "김OO님(강남구) GOLD 회원권 상담 신청",
+            "이OO님(해운대구) 오사카 일정 3명 문의",
+            "박OO님 북해도 기수 모집 가입 완료",
+            "최OO님 SILVER 잔여 좌석 긴급 확인",
+            "(주)OOTD 법인팀 상담 진행 중",
+            "정OO님 조난CC 부킹 가능 여부 확인",
+            "방금 전 익명의 회원님 가입 증서 발송"
+        ];
+        
+        function createToast() {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'notification-toast glass-card px-6 py-4 border-emerald-500/30 flex items-center gap-4 bg-black/60 shadow-2xl pointer-events-auto';
+            
+            const randomText = toastTexts[Math.floor(Math.random() * toastTexts.length)];
+            
+            toast.innerHTML = `
+                <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-bell text-[10px] text-white animate-swing"></i>
+                </div>
+                <div>
+                    <p class="text-[11px] font-black text-white">${randomText}</p>
+                    <p class="text-[9px] text-emerald-400 font-bold uppercase mt-1 tracking-tighter">방금 전 • 실시간 업데이트</p>
+                </div>
+            `;
+            
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(-20px)';
+                setTimeout(() => toast.remove(), 500);
+            }, 4000);
+        }
+
+        // Initialize
+        window.onload = () => {
+            animateViewers();
+            // Start notifications after 2 seconds, repeat every 6 seconds
+            setTimeout(() => {
+                createToast();
+                setInterval(createToast, 6000);
+            }, 2000);
+        };
+    </script>
 
 </body>
 </html>
