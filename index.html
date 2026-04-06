@@ -44,7 +44,15 @@
             font-weight: 900;
         }
 
-        btn-gold:hover {
+        .btn-gold {
+    background: linear-gradient(
+        135deg,
+        #6E5520 0%,
+        #C6A75E 50%,
+        #6E5520 100%
+    );
+    color: white;
+}
     filter: brightness(1.15);
     box-shadow: 0 10px 30px rgba(198,167,94,0.4);
 }
@@ -176,8 +184,8 @@
                 <p class="text-sm font-bold tracking-tight">현재 <span id="hero-viewers" class="text-emerald-400">24</span>명이 이 페이지를 보고 있습니다</p>
             </div>
 
-            <h2 class="text-emerald-500 font-black tracking-[0.3em] text-sm md:text-lg mb-6 uppercase">TCM GOLF MEMBERSHIP</h2>
-            <h1 class="text-2xl md:text-5xl lg:text-7xl font-black leading-[1.1] mb-8">
+            <h2 class="text-white font-black tracking-[0.3em] text-sm md:text-lg mb-6 uppercase">TCM GOLF MEMBERSHIP</h2>
+            <h1 class="text-2xl md:text-3xl md:text-5xl lg:text-7xl font-black leading-[1.1] mb-8">
                 일본 전역 30개 골프장을<br>
                 <span class="gold-text">회원가로 평생</span> 이용하는<br>
                 <span class="relative">
@@ -191,7 +199,7 @@
                 일본 골프의 정점을 <span class="font-black text-white underline decoration-emerald-500 underline-offset-8">‘보유’</span>하는 방식
             </p>
 
-            <p class="text-xl md:text-3xl font-black mb-8 md:mb-16 gold-text">
+            <p class="text-sm md:text-xl font-black mb-8 md:mb-16 gold-text">
                 하나의 회원권으로 일본 5개 지역 4계절 무제한 라운드
             </p>
 
@@ -223,7 +231,7 @@
             <div class="flex flex-col lg:flex-row gap-20 items-center">
                 <div class="lg:w-1/2">
                     <span class="text-emerald-500 font-bold tracking-widest mb-4 block">WHAT IS TCM?</span>
-                    <h3 class="text-4xl md:text-6xl font-black mb-10 leading-tight">
+                    <h3 class="text-4xl md:text-3xl md:text-6xl font-black mb-10 leading-tight">
                         TCM 회원권,<br>그 본질은 단 하나입니다.
                     </h3>
                     <div class="space-y-8">
@@ -316,13 +324,15 @@
     <section id="value" class="px-4 md:px-6 py-16 md:py-32">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24">
-                <h3 class="text-5xl font-black mb-6 gold-text underline decoration-gold-main underline-offset-[12px]">회원권 핵심 가치</h3>
+                <h3 class="text-3xl md:text-5xl font-black mb-6 gold-text">
+    회원권 핵심 가치
+</h3>
                 <p class="text-slate-400 text-xl">비교할 수 없는 TCM만의 5대 압도적 혜택</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Value 1 -->
-                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
                     <i class="fa-solid fa-plane-departure text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
                     <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-earth-asia"></i></div>
                     <h5 class="text-2xl font-black mb-6">일본 전역 완벽 커버</h5>
@@ -335,7 +345,7 @@
                 </div>
 
                 <!-- Value 2 -->
-                <div class="glass-card p-12 flex flex-col relative overflow-hidden border-emerald-500/30">
+                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden border-emerald-500/30">
                     <i class="fa-solid fa-trophy text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
                     <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-crown"></i></div>
                     <h5 class="text-2xl font-black mb-6">일본 TOP 5 명문 필드</h5>
@@ -346,7 +356,7 @@
                 </div>
 
                 <!-- Value 3 -->
-                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
                     <i class="fa-solid fa-money-bill-trend-up text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
                     <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-sack-dollar"></i></div>
                     <h5 class="text-2xl font-black mb-6">압도적 가격 효율성</h5>
@@ -357,7 +367,7 @@
                 </div>
 
                 <!-- Value 4 -->
-                <div class="glass-card p-12 flex flex-col relative overflow-hidden">
+                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
                     <i class="fa-solid fa-car-side text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
                     <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-gears"></i></div>
                     <h5 class="text-2xl font-black mb-6">완전 자동 운영 케어</h5>
@@ -419,7 +429,9 @@
                             <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 평생 회원 자격 보장</li>
                             <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 양도 및 양수 가능 (자산 가치)</li>
                         </ul>
-                        <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-6 rounded-2xl text-center block text-2xl font-black transition-all btn-3d">상담 신청하기</a>
+                        <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full btn-gold py-4 md:py-6 rounded-2xl text-center block text-base md:text-2xl font-black transition-all btn-3d">
+    상담 신청하기
+</a>
                     </div>
                 </div>
 
@@ -792,12 +804,17 @@
             <p class="text-emerald-400 font-black text-2xl mb-12">지금 이 조건은 이번 기수 한정으로 마감됩니다.</p>
             
             <div class="flex flex-col gap-6 items-center">
-                <a href="#pricing" class="w-full max-w-md bg-emerald-600 hover:bg-emerald-500 text-white text-3xl font-black py-8 rounded-3xl shadow-2xl transition-all btn-3d">
-                    👉 회원권 상담 신청
-                </a>
-                <a href="tel:010-2599-1095" class="text-white font-bold underline underline-offset-8 decoration-emerald-500 text-xl">
-                    지금 가입 가능 여부 확인하기 (잔여 7구좌)
-                </a>
+                <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full max-w-md btn-gold text-lg md:text-3xl font-black py-5 md:py-8 rounded-3xl shadow-2xl transition-all btn-3d">
+    👉 회원권 상담 신청
+</a>
+
+<a href="tel:010-2599-1095" class="text-white font-bold underline underline-offset-8 decoration-emerald-500 text-xl">
+    지금 가입 가능 여부 확인하기 (잔여 7구좌)
+</a>
+
+<p class="text-red-400 font-bold text-sm mt-4">
+※ 이번 기수 마감 시 동일 조건 재오픈 없습니다
+</p>
             </div>
         </div>
     </section>
