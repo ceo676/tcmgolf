@@ -1,18 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스승님 시그니처 골프티 50개입 상세페이지</title>
-    
-    <!-- Pretendard Font -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>스승님 시그니처 골프티 50개입 상세페이지</title>
+<!-- Pretendard Font -->
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -31,8 +30,7 @@
             }
         }
     </script>
-
-    <style>
+<style>
         body {
             word-break: keep-all;
             background-color: #E2E8F0; /* 에디터 배경 (실제 페이지 외곽) */
@@ -42,7 +40,7 @@
             margin: 0 auto;
             background-color: #ffffff;
             box-shadow: 0 0 40px rgba(0,0,0,0.05);
-            padding-bottom: 80px; /* 모바일 하단 고정 버튼 공간 확보 */
+            padding-bottom: 0;
         }
         /* 이미지 플레이스홀더 (디자이너 가이드용) */
         .img-placeholder {
@@ -118,721 +116,650 @@
 </head>
 <body class="antialiased text-bodyText">
 
-<!-- [모바일 하단 고정 구매 버튼] -->
-<!-- 구매 링크가 확정되면 href="#" 부분을 실제 구매 URL로 교체하세요. -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 p-4 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-    <a href="#" class="block w-full bg-mainBlue text-white py-4 rounded-xl font-bold text-lg text-center hover:bg-pointNavy transition duration-300">
-        출시 특가 9,900원 구매하기
-    </a>
-</div>
-
 <div class="landing-container relative">
-
-    <!-- [SECTION 1: 메인 인트로 (Hero)] -->
-    <section class="pt-24 md:pt-32 pb-16 px-6 text-center">
-        <span class="block text-mainBlue font-bold tracking-widest text-sm md:text-base mb-4">스승님 시그니처 골프티 롱83mm</span>
-        <h1 class="text-titleText text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
-            필드 위에서 완성되는<br>작은 디테일
+<!-- [SECTION 1: 메인 인트로 (Hero)] -->
+<section class="pt-24 md:pt-32 pb-16 px-6 text-center">
+<span class="block text-mainBlue font-bold tracking-widest text-sm md:text-base mb-4">스승님 시그니처 골프티 롱83mm</span>
+<h1 class="text-titleText text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
+            필드 위에서 완성되는<br/>작은 디테일
         </h1>
-        <p class="text-lg md:text-xl mb-12 text-gray-500">
+<p class="text-lg md:text-xl mb-12 text-gray-500">
             깔끔한 컬러, 안정적인 길이감, 스승님만의 시그니처 티
         </p>
-        
-        <!-- 제품 메인 컷 -->
-        <div class="w-full aspect-[4/5] md:aspect-video product-img-box rounded-2xl">
-            <img
-                src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/1.png"
-                alt="스승님 시그니처 골프티 롱83mm 제품 메인 컷"
-                loading="eager"
-            >
-        </div>
-
-        <!-- 구매 요약 박스 -->
-        <div class="mt-10 max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl p-6 md:p-8 text-left summary-card-shadow">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                <div>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-mainBlue text-xs font-black mb-4">출시 특가 · 50개입 · 83mm 롱티</span>
-                    <h2 class="text-2xl md:text-3xl font-black text-titleText leading-tight">스승님 시그니처 골프티 50개입</h2>
-                    <p class="mt-3 text-gray-500 text-base md:text-lg">화이트 + 딥블루 컬러 믹스, 드라이버 티샷용 83mm 롱티.</p>
-                </div>
-                <div class="md:text-right">
-                    <p class="text-sm text-gray-400 font-bold mb-1">출시 특가</p>
-                    <p class="text-3xl font-black text-mainBlue">9,900원</p>
-                    <p class="text-sm text-gray-500 mt-2">배송비 3,000원 / 무료배송 옵션 12,900원</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
-                <div class="bg-softGray rounded-xl p-4 text-center">
-                    <p class="text-xs text-gray-400 font-bold mb-1">메인 구성</p>
-                    <p class="text-titleText font-black">50개입</p>
-                </div>
-                <div class="bg-softGray rounded-xl p-4 text-center">
-                    <p class="text-xs text-gray-400 font-bold mb-1">길이</p>
-                    <p class="text-titleText font-black">83mm</p>
-                </div>
-                <div class="bg-softGray rounded-xl p-4 text-center">
-                    <p class="text-xs text-gray-400 font-bold mb-1">소재</p>
-                    <p class="text-titleText font-black">대나무</p>
-                </div>
-                <div class="bg-softGray rounded-xl p-4 text-center">
-                    <p class="text-xs text-gray-400 font-bold mb-1">컬러</p>
-                    <p class="text-titleText font-black">화이트 / 딥블루</p>
-                </div>
-                <div class="bg-softGray rounded-xl p-4 text-center col-span-2 md:col-span-1">
-                    <p class="text-xs text-gray-400 font-bold mb-1">추천</p>
-                    <p class="text-titleText font-black">드라이버 티샷용</p>
-                </div>
-            </div>
-
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-3">
-                <div class="border border-gray-200 rounded-xl p-4 bg-white">
-                    <p class="text-sm font-black text-titleText">20개입 라운딩팩</p>
-                    <p class="text-xl font-black text-mainBlue mt-2">5,900원</p>
-                    <p class="text-xs text-gray-500 mt-1">가볍게 체험용</p>
-                </div>
-                <div class="border-2 border-mainBlue rounded-xl p-4 bg-blue-50 relative">
-                    <span class="absolute -top-3 left-4 bg-mainBlue text-white text-xs font-black px-3 py-1 rounded-full">메인</span>
-                    <p class="text-sm font-black text-titleText">50개입 실속팩</p>
-                    <p class="text-xl font-black text-mainBlue mt-2">9,900원</p>
-                    <p class="text-xs text-gray-500 mt-1">배송비 별도</p>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-4 bg-white">
-                    <p class="text-sm font-black text-titleText">50개입 무료배송팩</p>
-                    <p class="text-xl font-black text-mainBlue mt-2">12,900원</p>
-                    <p class="text-xs text-gray-500 mt-1">배송비 포함가</p>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-4 bg-white">
-                    <p class="text-sm font-black text-titleText">100개입 대용량팩</p>
-                    <p class="text-xl font-black text-mainBlue mt-2">16,900원</p>
-                    <p class="text-xs text-gray-500 mt-1">모임·선물용</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-8">
-                <a href="#" class="bg-mainBlue text-white py-4 rounded-xl font-black text-center hover:bg-pointNavy transition duration-300">
-                    출시 특가 9,900원 구매하기
-                </a>
-                <a href="#" class="bg-white text-mainBlue py-4 rounded-xl font-black text-center border border-mainBlue hover:bg-blue-50 transition duration-300">
-                    카카오톡 문의
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 2: 브랜드 무드] -->
-    <section class="bg-softGray py-24 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-titleText text-3xl md:text-4xl font-bold mb-8 leading-relaxed">
-                동반자의 시선을 사로잡는 정교함.<br>
-                단순한 티샷 소모품을 넘어<br>
-                필드 위의 품격을 더합니다.
-            </h2>
-            <p class="text-xl leading-relaxed text-gray-600">
-                선명한 로고 인쇄와 감각적인 컬러 매치로 완성된<br>
-                스승님의 시그니처 골프티 라인업.
-            </p>
-        </div>
-    </section>
-
-    <!-- [SECTION 3: 왜 필요한가] -->
-    <section class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">WHY SEUSEUNGNIM TEE</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-titleText leading-tight">라운드 때 은근히 신경 쓰이는 골프티</h2>
-            </div>
-            <div class="bg-softGray rounded-3xl p-8 md:p-12 border border-gray-100">
-                <p class="text-xl md:text-2xl text-titleText font-bold leading-relaxed mb-6">
-                    드라이버 티샷 전마다 높이가 애매하거나,<br class="hidden md:block">
-                    잔디 위에서 티가 잘 보이지 않거나,<br class="hidden md:block">
-                    기본 무지 티가 너무 소모품처럼 느껴졌다면.
-                </p>
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-                    스승님 시그니처 롱티는 필드 위의 작은 준비물까지 깔끔하게 맞추고 싶은 골퍼를 위해 만들었습니다.
-                    과장된 기능보다, 실제 라운드에서 쓰기 좋은 길이감과 시인성, 넉넉한 구성을 중심으로 정리했습니다.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 4: 핵심 포인트 요약] -->
-    <section class="py-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-center text-3xl font-bold text-titleText mb-16">제품 포인트</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
-                    <span class="block text-mainBlue font-bold mb-3 text-sm">POINT 01</span>
-                    <h3 class="text-titleText text-lg font-bold">안정적인<br>83mm 길이</h3>
-                </div>
-                <div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
-                    <span class="block text-mainBlue font-bold mb-3 text-sm">POINT 02</span>
-                    <h3 class="text-titleText text-lg font-bold">깔끔한<br>대나무 소재</h3>
-                </div>
-                <div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
-                    <span class="block text-mainBlue font-bold mb-3 text-sm">POINT 03</span>
-                    <h3 class="text-titleText text-lg font-bold">화이트 & 딥블루<br>시그니처 컬러</h3>
-                </div>
-                <div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
-                    <span class="block text-mainBlue font-bold mb-3 text-sm">POINT 04</span>
-                    <h3 class="text-titleText text-lg font-bold">선명한 스승님<br>로고 인쇄</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 4: 기능적 포인트 01 - 83mm 길이] -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 aspect-square product-img-box rounded-2xl">
-                <img
-                    src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/2.png"
-                    alt="스승님 시그니처 골프티 83mm 길이감 디테일 컷"
-                    loading="lazy"
-                >
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold text-titleText mb-6 leading-tight">
-                    460cc 대형 헤드에<br>여유롭게 맞춘 83mm 롱티
-                </h2>
-                <p class="text-lg leading-relaxed text-gray-600 mb-6">
-                    롱티 타입의 83mm 길이로 드라이버 티샷 시 원하는 높이에 맞춰 보다 안정적인 티 세팅이 가능합니다.
-                </p>
-                <p class="text-lg leading-relaxed text-gray-600">
-                    최근 많이 사용하는 대형 드라이버 헤드와도 잘 어울리며, 라운드 전 준비 과정까지 깔끔하게 정돈해 줍니다.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 5: 기능적 포인트 02 - 대나무 소재] -->
-    <section class="py-24 px-6 bg-softGray">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
-            <div class="w-full md:w-1/2 aspect-square product-img-box bg-white rounded-2xl border border-gray-100">
-                <img
-                    src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/3.png"
-                    alt="스승님 시그니처 골프티 대나무 소재 클로즈업 컷"
-                    loading="lazy"
-                >
-            </div>
-            <div class="w-full md:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold text-titleText mb-6 leading-tight">
-                    깔끔한 사용감을 위한<br>대나무 소재
-                </h2>
-                <p class="text-lg leading-relaxed text-gray-600 mb-6">
-                    가볍고 정돈된 인상의 대나무 골프티로 필드 위에서도 부담 없이 사용할 수 있습니다.
-                </p>
-                <p class="text-lg leading-relaxed text-gray-600">
-                    슬림한 바디와 매끄러운 표면감으로 라운드 준비물까지 깔끔하게 맞추고 싶은 골퍼에게 적합합니다.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 6: 제품 디테일 01 - 로고 / 컬러 연출컷] -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 aspect-[4/5] product-img-box rounded-2xl">
-                <img
-                    src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/4.png"
-                    alt="스승님 시그니처 골프티 로고와 컬러 연출컷"
-                    loading="lazy"
-                >
-                <span class="product-img-note">
-                    ※ 일부 이미지 내 소품은 연출용입니다.
-                </span>
-            </div>
-            <div class="w-full md:w-1/2">
-                <div class="mb-12">
-                    <span class="text-mainBlue font-bold text-lg mb-3 block">POINT 01. 선명한 스승님 로고 인쇄</span>
-                    <p class="text-xl leading-relaxed text-titleText">
-                        딥블루와 화이트 컬러 위에 스승님 로고를 선명하게 적용해 브랜드의 시그니처 무드를 완성했습니다.
-                    </p>
-                </div>
-                <div>
-                    <span class="text-mainBlue font-bold text-lg mb-3 block">POINT 02. 통일감 있는 스타일링</span>
-                    <p class="text-xl leading-relaxed text-titleText">
-                        필드 위에서도 깔끔하고 정돈된 느낌을 주는 스승님만의 컬러 밸런스를 담았습니다.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 7: 제품 디테일 02 - 형태 / 구조 / 바디 밸런스] -->
-    <section class="py-24 px-6 bg-softGray">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
-            <div class="w-full md:w-1/2 aspect-square product-img-box bg-white rounded-2xl border border-gray-100">
-                <img
-                    src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/5.png"
-                    alt="스승님 시그니처 골프티 형태와 바디 밸런스 컷"
-                    loading="lazy"
-                >
-            </div>
-            <div class="w-full md:w-1/2">
-                <div class="mb-12">
-                    <span class="text-mainBlue font-bold text-lg mb-3 block">POINT 03. 안정적인 83mm 길이</span>
-                    <p class="text-xl leading-relaxed text-titleText">
-                        롱티 타입의 83mm 길이로 드라이버 티샷 시 여유 있는 세팅이 가능합니다.
-                    </p>
-                </div>
-                <div>
-                    <span class="text-mainBlue font-bold text-lg mb-3 block">POINT 04. 정돈된 바디 밸런스</span>
-                    <p class="text-xl leading-relaxed text-titleText">
-                        슬림하고 깔끔한 실루엣으로 필드 위에서도 세련된 인상을 더합니다.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 8: 현장감 연출 GIF 섹션] -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-titleText mb-8">필드 위에서 자연스럽게 쓰이는 순간</h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-12">
-                골프티는 과장된 설명보다 실제 라운드에서의 사용 장면이 중요합니다.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left mb-14">
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6">
-                    <span class="text-mainBlue font-black text-sm">01. 드라이버 티샷 전</span>
-                    <h3 class="text-xl font-black text-titleText mt-3 mb-2">여유 있는 높이 세팅</h3>
-                    <p class="text-gray-600 leading-relaxed">83mm 롱티로 드라이버 티샷 전 안정적인 티 높이 세팅을 돕습니다.</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6">
-                    <span class="text-mainBlue font-black text-sm">02. 잔디 위에서</span>
-                    <h3 class="text-xl font-black text-titleText mt-3 mb-2">선명한 컬러 시인성</h3>
-                    <p class="text-gray-600 leading-relaxed">화이트와 딥블루 컬러로 잔디 위에서도 깔끔하게 눈에 들어옵니다.</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6">
-                    <span class="text-mainBlue font-black text-sm">03. 라운드 준비물로</span>
-                    <h3 class="text-xl font-black text-titleText mt-3 mb-2">실속 있는 50개입</h3>
-                    <p class="text-gray-600 leading-relaxed">라운딩 가방에 넣어두기 좋은 50개입 실속 구성으로 부담 없이 사용할 수 있습니다.</p>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <div class="aspect-video product-img-box rounded-2xl mb-6 shadow-sm border border-gray-100">
-                        <img
-                            src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/7.png"
-                            alt="스승님 시그니처 골프티 세팅 클로즈업 컷"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3 class="text-xl font-bold text-titleText mb-2">흔들림 없이 깔끔한 세팅</h3>
-                </div>
-                <div>
-                    <div class="aspect-video product-img-box rounded-2xl mb-6 shadow-sm border border-gray-100">
-                        <img
-                            src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/8.png"
-                            alt="스승님 시그니처 골프티 임팩트 연출 컷"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3 class="text-xl font-bold text-titleText mb-2">군더더기 없는 깔끔한 임팩트</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 9: 50개입 실속 구성 강조] -->
-    <section class="py-24 px-6 bg-pointNavy text-white">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-                <span class="text-goldAccent font-bold tracking-widest text-sm block mb-4">MAIN VALUE PACK</span>
-                <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
-                    라운딩 가방에 넣어두기 좋은<br>50개입 실속 구성
-                </h2>
-                <p class="text-lg text-gray-200 leading-relaxed mb-6">
-                    50개입은 가격 부담을 낮추면서도 필드, 연습장, 동반자와의 라운드까지 여유 있게 사용할 수 있는 현실적인 구성입니다.
-                </p>
-                <p class="text-lg text-gray-200 leading-relaxed">
-                    가볍게 써보고 싶은 골퍼는 20개입, 모임·선물·프로샵 용도는 100개입 또는 대량 구매로 안내할 수 있습니다.
-                </p>
-            </div>
-            <div class="bg-white/8 border border-white/10 rounded-3xl p-8">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white/10 rounded-2xl p-6 text-center">
-                        <p class="text-4xl font-black text-goldAccent mb-2">50</p>
-                        <p class="font-bold">개입 메인팩</p>
-                    </div>
-                    <div class="bg-white/10 rounded-2xl p-6 text-center">
-                        <p class="text-4xl font-black text-goldAccent mb-2">9,900</p>
-                        <p class="font-bold">출시 특가</p>
-                    </div>
-                    <div class="bg-white/10 rounded-2xl p-6 text-center">
-                        <p class="text-4xl font-black text-goldAccent mb-2">83</p>
-                        <p class="font-bold">mm 롱티</p>
-                    </div>
-                    <div class="bg-white/10 rounded-2xl p-6 text-center">
-                        <p class="text-4xl font-black text-goldAccent mb-2">2</p>
-                        <p class="font-bold">컬러 믹스</p>
-                    </div>
-                </div>
-                <div class="mt-6 bg-white/10 rounded-2xl p-5 text-sm text-gray-200 leading-relaxed">
-                    12,900원은 메인 가격이 아니라 배송비 포함 옵션으로 안내하는 구조가 자연스럽습니다.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 10: 소재 / 컬러 강조 섹션] -->
-    <section class="py-24 px-6 bg-softGray">
-        <div class="max-w-4xl mx-auto space-y-24 text-center">
-            <div>
-                <div class="w-full aspect-[21/9] product-img-box bg-white rounded-2xl mb-8 border border-gray-100">
-                    <img
-                        src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/9.png"
-                        alt="스승님 시그니처 골프티 대나무 소재 단독 컷"
-                        loading="lazy"
-                    >
-                </div>
-                <h3 class="text-2xl font-bold text-titleText mb-4">대나무 소재로 완성한 깔끔한 사용감</h3>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    가볍고 정돈된 인상의 대나무 골프티로<br>라운드 준비까지 더 깔끔하게
-                </p>
-            </div>
-            <div>
-                <div class="w-full aspect-[21/9] product-img-box bg-white rounded-2xl mb-8 border border-gray-100">
-                    <img
-                        src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/10.png"
-                        alt="스승님 시그니처 골프티 화이트와 딥블루 컬러 대비 컷"
-                        loading="lazy"
-                    >
-                </div>
-                <h3 class="text-2xl font-bold text-titleText mb-4">화이트 & 딥블루의 시그니처 컬러 조합</h3>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    잔디 위에서도 선명하게 보이는<br>스승님만의 감각적인 컬러 밸런스.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 10: 일반 저가형 티와 비교] -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-titleText mb-16">일반 무지 티와 다른 점</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- 일반 티 -->
-                <div class="bg-gray-50 p-10 rounded-2xl border border-gray-200 h-full flex flex-col">
-                    <h3 class="text-xl font-bold text-gray-500 text-center mb-8 pb-4 border-b border-gray-200">일반 저가형 무지 나무티</h3>
-                    <ul class="space-y-5 flex-grow">
-                        <li class="flex items-start text-gray-500 text-lg">
-                            <i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
-                            일정하지 않은 길이감과 거친 마감
-                        </li>
-                        <li class="flex items-start text-gray-500 text-lg">
-                            <i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
-                            쉽게 소모되는 낮은 사용 만족도
-                        </li>
-                        <li class="flex items-start text-gray-500 text-lg">
-                            <i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
-                            밋밋한 디자인
-                        </li>
-                        <li class="flex items-start text-gray-500 text-lg">
-                            <i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
-                            필드에서 잘 눈에 띄지 않는 컬러
-                        </li>
-                        <li class="flex items-start text-gray-500 text-lg">
-                            <i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
-                            브랜드 감성이 부족한 기본형 소모품
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- 스승님 티 -->
-                <div class="bg-white p-10 rounded-2xl border-2 border-mainBlue shadow-[0_10px_30px_rgba(0,51,153,0.1)] h-full flex flex-col">
-                    <h3 class="text-xl font-bold text-mainBlue text-center mb-8 pb-4 border-b border-gray-100">스승님 시그니처 롱티</h3>
-                    <ul class="space-y-5 flex-grow">
-                        <li class="flex items-start text-titleText font-medium text-lg">
-                            <i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
-                            안정적인 83mm 롱티 타입
-                        </li>
-                        <li class="flex items-start text-titleText font-medium text-lg">
-                            <i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
-                            깔끔한 대나무 소재
-                        </li>
-                        <li class="flex items-start text-titleText font-medium text-lg">
-                            <i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
-                            매끄럽고 정돈된 표면감
-                        </li>
-                        <li class="flex items-start text-titleText font-medium text-lg">
-                            <i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
-                            잔디 위에서 돋보이는 딥블루 & 화이트 컬러
-                        </li>
-                        <li class="flex items-start text-titleText font-medium text-lg">
-                            <i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
-                            스승님 시그니처 로고 인쇄
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 12: 필드 테스트 코멘트] -->
-    <section class="py-24 px-6 bg-pointNavy text-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="text-goldAccent text-sm font-bold tracking-widest block mb-4">FIELD TEST COMMENT</span>
-                <h2 class="text-3xl md:text-4xl font-bold">스승님 필드 테스트 코멘트</h2>
-            </div>
-            <div class="bg-white/5 border border-goldAccent/30 p-8 md:p-12 rounded-2xl text-center">
-                <i class="fa-solid fa-quote-left text-goldAccent text-3xl mb-8"></i>
-                <p class="text-xl md:text-2xl text-gray-100 leading-relaxed font-light">
-                    “83mm 길이감, 컬러 시인성, 50개입 실속 구성에 초점을 맞춰<br class="hidden md:block">
-                    실제 라운드에서 부담 없이 사용할 수 있도록 기획했습니다.”
-                </p>
-                <div class="mt-8 pt-6 border-t border-white/10">
-                    <p class="text-goldAccent font-bold">사용 후기 콘텐츠는 실제 골퍼 피드백을 바탕으로 순차 업데이트 예정입니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 12: 추천 대상] -->
-    <section class="py-24 px-6 bg-softGray">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-titleText mb-10">이런 골퍼에게 추천합니다</h2>
-            <ul class="space-y-4">
-                <li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
-                    <i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
-                    <span class="text-lg text-titleText font-medium">롱 83mm 골프티를 선호하는 골퍼</span>
-                </li>
-                <li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
-                    <i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
-                    <span class="text-lg text-titleText font-medium">라운드 준비물도 깔끔하게 맞추고 싶은 골퍼</span>
-                </li>
-                <li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
-                    <i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
-                    <span class="text-lg text-titleText font-medium">브랜드 감성이 담긴 골프 소품을 찾는 골퍼</span>
-                </li>
-                <li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
-                    <i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
-                    <span class="text-lg text-titleText font-medium">스승님 시그니처 굿즈를 사용해보고 싶은 골퍼</span>
-                </li>
-            </ul>
-            
-            <!-- PC 구매 버튼 (모바일 숨김) -->
-            <div class="mt-16 text-center hidden md:block">
-                <button class="bg-mainBlue text-white px-20 py-5 rounded-xl font-bold text-xl hover:bg-pointNavy transition duration-300 shadow-lg">
-                    스승님 시그니처 롱티 구매하기
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 13: 선물 / 단체 구매 추천] -->
-    <section id="bulk-buy" class="py-24 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">GIFT & BULK ORDER</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-titleText leading-tight">이런 용도로도 좋습니다</h2>
-                <p class="text-lg text-gray-600 mt-5 leading-relaxed">
-                    개인 사용뿐 아니라 골프 모임, 레슨, 프로샵, 사은품 용도로도 활용할 수 있습니다.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
-                    <i class="fa-solid fa-users text-mainBlue text-2xl mb-4"></i>
-                    <p class="text-titleText font-black leading-snug">골프 모임<br>단체 선물</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
-                    <i class="fa-solid fa-gift text-mainBlue text-2xl mb-4"></i>
-                    <p class="text-titleText font-black leading-snug">레슨생<br>증정용 굿즈</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
-                    <i class="fa-solid fa-store text-mainBlue text-2xl mb-4"></i>
-                    <p class="text-titleText font-black leading-snug">프로샵<br>판매용 소품</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
-                    <i class="fa-solid fa-golf-ball-tee text-mainBlue text-2xl mb-4"></i>
-                    <p class="text-titleText font-black leading-snug">스크린골프장<br>연습장 사은품</p>
-                </div>
-                <div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
-                    <i class="fa-solid fa-building text-mainBlue text-2xl mb-4"></i>
-                    <p class="text-titleText font-black leading-snug">기업 라운드<br>기념품</p>
-                </div>
-            </div>
-
-            <div class="mt-10 bg-mainBlue rounded-2xl p-8 md:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                <div>
-                    <h3 class="text-2xl font-black mb-2">대량 구매는 별도 문의가 가능합니다.</h3>
-                    <p class="text-blue-100">수량, 납기, 용도에 따라 안내가 달라질 수 있습니다.</p>
-                </div>
-                <a href="#" class="bg-white text-mainBlue px-8 py-4 rounded-xl font-black text-center hover:bg-blue-50 transition duration-300">
-                    대량 구매 문의
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 14: 제품 구성 / 스펙 안내 & SECTION 15: 상세안내 박스] -->
-    <section class="py-20 px-6 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto">
-            
-            <h3 class="text-2xl font-bold text-titleText mb-8">제품 구성 안내</h3>
-
-            <!-- 제품 구성 컷 -->
-            <div class="w-full aspect-video product-img-box bg-white rounded-2xl mb-10 border border-gray-100">
-                <img
-                    src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/10.png"
-                    alt="스승님 시그니처 골프티 판매 옵션 제품 구성 컷"
-                    loading="lazy"
-                >
-            </div>
-            
-            <!-- 제품 스펙 테이블 -->
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-12">
-                <table class="w-full text-left text-sm md:text-base">
-                    <tbody>
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold w-1/3">제품명</th>
-                            <td class="py-5 pl-8 text-bodyText">스승님 시그니처 골프티 롱83mm 50개입</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">브랜드</th>
-                            <td class="py-5 pl-8 text-bodyText">스승님</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">소재</th>
-                            <td class="py-5 pl-8 text-bodyText">대나무</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">구성품</th>
-                            <td class="py-5 pl-8 text-bodyText font-medium text-mainBlue">골프티 50개입 기본 / 20개입·100개입 옵션</td>
-                        </tr>
-
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">판매가</th>
-                            <td class="py-5 pl-8 text-bodyText">50개입 실속팩 9,900원 / 50개입 무료배송팩 12,900원 / 100개입 대용량팩 16,900원</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">길이</th>
-                            <td class="py-5 pl-8 text-bodyText">83mm</td>
-                        </tr>
-                        <tr>
-                            <th class="py-5 pl-8 bg-softGray text-titleText font-bold">무게</th>
-                            <td class="py-5 pl-8 text-bodyText">1.5g</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- 꼭 확인해주세요 박스 -->
-            <div class="bg-softGray border border-gray-200 p-8 md:p-10 rounded-xl mb-12">
-                <h4 class="text-xl font-bold text-titleText mb-6">꼭 확인해주세요!</h4>
-                <ul class="list-disc list-outside ml-5 space-y-3 text-base text-gray-600">
-                    <li>해당 이미지는 해상도 및 실내 조도에 따라 실제 색상과 차이가 있을 수 있습니다.</li>
-                    <li>제품 사양은 품질 향상 및 제조사 사정에 따라 예고 없이 변경될 수 있습니다.</li>
-                    <li>제품 특성상 공정 과정에서 발생한 미세한 스크래치, 기포, 얼룩, 찍힘이 있을 수 있습니다.</li>
-                    <li class="font-medium text-mainBlue">일부 이미지 내 소품은 연출용이며, 실제 구성품은 선택한 판매 옵션에 따라 달라집니다.</li>
-                </ul>
-            </div>
-
-            <!-- FAQ -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold text-titleText mb-8">자주 묻는 질문</h3>
-                <div class="space-y-4">
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 83mm는 어떤 골퍼에게 맞나요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">드라이버 티샷용 롱티를 선호하는 골퍼에게 적합합니다.</p>
-                    </details>
-
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 어떤 구성이 메인 상품인가요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">메인 상품은 50개입 실속팩 9,900원입니다. 배송비 포함으로 구매하고 싶은 경우 50개입 무료배송팩 12,900원 옵션을 선택할 수 있습니다.</p>
-                    </details>
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 색상은 어떻게 구성되나요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">화이트와 딥블루 컬러로 구성됩니다. 실제 구성 비율은 판매 옵션에 따라 안내됩니다.</p>
-                    </details>
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 소재는 무엇인가요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">대나무 소재로 제작되었습니다.</p>
-                    </details>
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 사용 후 교환/반품이 가능한가요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">제품 특성상 사용 흔적이 있거나 상품 가치가 훼손된 경우 교환/반품이 제한될 수 있습니다.</p>
-                    </details>
-                    <details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
-                        <summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
-                            Q. 대량 구매도 가능한가요?
-                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
-                        </summary>
-                        <p class="text-gray-600 leading-relaxed mt-4">골프 모임, 프로샵, 레슨생 선물용 대량 구매는 카카오톡 채널로 문의 가능합니다.</p>
-                    </details>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 16: 배송 / 교환 / 반품 / 고객센터] -->
-    <section id="contact-info" class="py-16 px-6 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-gray-500">
-                <div>
-                    <h5 class="font-bold text-gray-700 text-base mb-4">배송/교환/반품 안내</h5>
-                    <ul class="space-y-2 list-disc list-inside">
-                        <li>배송 일정은 주문 및 택배사 사정에 따라 달라질 수 있습니다.</li>
-                        <li>단순 변심에 의한 교환/반품은 수령 후 7일 이내 접수 가능합니다.</li>
-                        <li>사용 흔적이 있거나 상품 가치가 훼손된 경우 교환/반품이 제한될 수 있습니다.</li>
-                        <li>자세한 문의는 고객센터를 통해 확인 부탁드립니다.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="font-bold text-gray-700 text-base mb-4">고객센터</h5>
-                    <ul class="space-y-2 bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
-                        <li class="flex justify-between border-b border-gray-50 pb-2"><span class="font-medium">운영시간</span> <span>평일 10:00 - 17:00</span></li>
-                        <li class="flex justify-between border-b border-gray-50 py-2"><span class="font-medium">점심시간</span> <span>12:00 - 13:00</span></li>
-                        <li class="flex justify-between pt-2"><span class="font-medium">휴무</span> <span>주말 / 공휴일 휴무</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 17: 최종 구매 CTA] -->
-    <section class="py-20 px-6 bg-white border-t border-gray-200">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">SEUSEUNGNIM SIGNATURE TEE</span>
-            <h2 class="text-3xl md:text-4xl font-black text-titleText leading-tight mb-5">
-                라운드 준비물까지 깔끔하게 맞추세요
-            </h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-10">
-                83mm 롱티, 대나무 소재, 화이트 & 딥블루 컬러, 50개입 출시 특가 9,900원.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-xl mx-auto">
-                <a href="#" class="bg-mainBlue text-white py-5 rounded-xl font-black text-lg text-center hover:bg-pointNavy transition duration-300 shadow-lg">
-                    출시 특가 9,900원 구매하기
-                </a>
-                <a href="#" class="bg-white text-mainBlue py-5 rounded-xl font-black text-lg text-center border border-mainBlue hover:bg-blue-50 transition duration-300">
-                    대량 구매 문의
-                </a>
-            </div>
-        </div>
-    </section>
-
+<!-- 제품 메인 컷 -->
+<div class="w-full aspect-[4/5] md:aspect-video product-img-box rounded-2xl">
+<img alt="스승님 시그니처 골프티 롱83mm 제품 메인 컷" loading="eager" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/1.png"/>
 </div>
+<!-- 구매 요약 박스 -->
+<div class="mt-10 max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl p-6 md:p-8 text-left summary-card-shadow">
+<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+<div>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-mainBlue text-xs font-black mb-4">출시 특가 · 50개입 · 83mm 롱티</span>
+<h2 class="text-2xl md:text-3xl font-black text-titleText leading-tight">스승님 시그니처 골프티 50개입</h2>
+<p class="mt-3 text-gray-500 text-base md:text-lg">화이트 + 딥블루 컬러 믹스, 드라이버 티샷용 83mm 롱티</p>
+</div>
+<div class="md:text-right">
+<p class="text-sm text-gray-400 font-bold mb-1">출시 특가</p>
+<p class="text-3xl font-black text-mainBlue">9,900원</p>
+<p class="text-sm text-gray-500 mt-2">배송비 3,000원 / 무료배송 옵션 12,900원</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-8">
+<div class="bg-softGray rounded-xl p-4 text-center">
+<p class="text-xs text-gray-400 font-bold mb-1">메인 구성</p>
+<p class="text-titleText font-black">50개입</p>
+</div>
+<div class="bg-softGray rounded-xl p-4 text-center">
+<p class="text-xs text-gray-400 font-bold mb-1">길이</p>
+<p class="text-titleText font-black">83mm</p>
+</div>
+<div class="bg-softGray rounded-xl p-4 text-center">
+<p class="text-xs text-gray-400 font-bold mb-1">소재</p>
+<p class="text-titleText font-black">대나무</p>
+</div>
+<div class="bg-softGray rounded-xl p-4 text-center">
+<p class="text-xs text-gray-400 font-bold mb-1">컬러</p>
+<p class="text-titleText font-black">화이트 / 딥블루</p>
+</div>
+<div class="bg-softGray rounded-xl p-4 text-center col-span-2 md:col-span-1">
+<p class="text-xs text-gray-400 font-bold mb-1">추천</p>
+<p class="text-titleText font-black">드라이버 티샷용</p>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-4 gap-3">
+<div class="border border-gray-200 rounded-xl p-4 bg-white">
+<p class="text-sm font-black text-titleText">20개입 라운딩팩</p>
+<p class="text-xl font-black text-mainBlue mt-2">5,900원</p>
+<p class="text-xs text-gray-500 mt-1">가볍게 체험용</p>
+</div>
+<div class="border-2 border-mainBlue rounded-xl p-4 bg-blue-50 relative">
+<span class="absolute -top-3 left-4 bg-mainBlue text-white text-xs font-black px-3 py-1 rounded-full">메인</span>
+<p class="text-sm font-black text-titleText">50개입 실속팩</p>
+<p class="text-xl font-black text-mainBlue mt-2">9,900원</p>
+<p class="text-xs text-gray-500 mt-1">배송비 별도</p>
+</div>
+<div class="border border-gray-200 rounded-xl p-4 bg-white">
+<p class="text-sm font-black text-titleText">50개입 무료배송팩</p>
+<p class="text-xl font-black text-mainBlue mt-2">12,900원</p>
+<p class="text-xs text-gray-500 mt-1">배송비 포함가</p>
+</div>
+<div class="border border-gray-200 rounded-xl p-4 bg-white">
+<p class="text-sm font-black text-titleText">100개입 대용량팩</p>
+<p class="text-xl font-black text-mainBlue mt-2">16,900원</p>
+<p class="text-xs text-gray-500 mt-1">모임·선물용</p>
+</div>
+</div>
+<div class="mt-8 bg-pointNavy text-white rounded-2xl p-6 md:p-7 border border-pointNavy text-center">
+<p class="text-sm text-goldAccent font-black tracking-widest mb-2">구매 및 대량 문의 안내</p>
+<p class="text-xl md:text-2xl font-black leading-tight">자세한 문의는 카카오톡에서 <span class="text-goldAccent">“스승님”</span>을 검색해주세요</p>
+<p class="text-sm md:text-base text-blue-100 mt-3 leading-relaxed">구성, 재고, 대량 구매, 배송 관련 안내는 스승님 공식 카카오톡 채널에서 확인할 수 있습니다</p>
+</div>
+</div>
+</section>
+<!-- [SECTION 2: 브랜드 무드] -->
+<section class="bg-softGray py-24 px-6 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-titleText text-3xl md:text-4xl font-bold mb-8 leading-relaxed">
+                동반자의 시선을 사로잡는 정교함<br/>
+                단순한 티샷 소모품을 넘어<br/>
+                필드 위의 품격을 더합니다
+            </h2>
+<p class="text-xl leading-relaxed text-gray-600">
+                선명한 로고 인쇄와 감각적인 컬러 매치로 완성된<br/>
+                스승님의 시그니처 골프티 라인업
+            </p>
+</div>
+</section>
+<!-- [SECTION 3: 왜 필요한가] -->
+<section class="py-24 px-6 bg-white">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">WHY SEUSEUNGNIM TEE</span>
+<h2 class="text-3xl md:text-4xl font-bold text-titleText leading-tight">라운드 때 은근히 신경 쓰이는 골프티</h2>
+</div>
+<div class="bg-softGray rounded-3xl p-8 md:p-12 border border-gray-100">
+<p class="text-xl md:text-2xl text-titleText font-bold leading-relaxed mb-6">
+                    드라이버 티샷 전마다 높이가 애매하거나,<br class="hidden md:block"/>
+                    잔디 위에서 티가 잘 보이지 않거나,<br class="hidden md:block"/>
+                    기본 무지 티가 너무 소모품처럼 느껴졌다면
+                </p>
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    스승님 시그니처 롱티는 필드 위의 작은 준비물까지 깔끔하게 맞추고 싶은 골퍼를 위해 만들었습니다
+                    과장된 기능보다, 실제 라운드에서 쓰기 좋은 길이감과 시인성, 넉넉한 구성을 중심으로 정리했습니다
+                </p>
+</div>
+</div>
+</section>
+<!-- [SECTION 4: 핵심 포인트 요약] -->
+<section class="py-24 px-6">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-center text-3xl font-bold text-titleText mb-16">제품 포인트</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+<div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
+<span class="block text-mainBlue font-bold mb-3 text-sm">POINT 01</span>
+<h3 class="text-titleText text-lg font-bold">안정적인<br/>83mm 길이</h3>
+</div>
+<div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
+<span class="block text-mainBlue font-bold mb-3 text-sm">POINT 02</span>
+<h3 class="text-titleText text-lg font-bold">깔끔한<br/>대나무 소재</h3>
+</div>
+<div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
+<span class="block text-mainBlue font-bold mb-3 text-sm">POINT 03</span>
+<h3 class="text-titleText text-lg font-bold">화이트 &amp; 딥블루<br/>시그니처 컬러</h3>
+</div>
+<div class="p-8 bg-softGray rounded-2xl border border-gray-100 flex flex-col items-center justify-center">
+<span class="block text-mainBlue font-bold mb-3 text-sm">POINT 04</span>
+<h3 class="text-titleText text-lg font-bold">선명한 스승님<br/>로고 인쇄</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 4: 기능적 포인트 01 - 83mm 길이] -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 aspect-square product-img-box rounded-2xl">
+<img alt="스승님 시그니처 골프티 83mm 길이감 디테일 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/2.png"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-titleText mb-6 leading-tight">
+                    460cc 대형 헤드에<br/>여유롭게 맞춘 83mm 롱티
+                </h2>
+<p class="text-lg leading-relaxed text-gray-600 mb-6">
+                    롱티 타입의 83mm 길이로 드라이버 티샷 시 원하는 높이에 맞춰 보다 안정적인 티 세팅이 가능합니다
+                </p>
+<p class="text-lg leading-relaxed text-gray-600">
+                    최근 많이 사용하는 대형 드라이버 헤드와도 잘 어울리며, 라운드 전 준비 과정까지 깔끔하게 정돈해 줍니다
+                </p>
+</div>
+</div>
+</section>
+<!-- [SECTION 5: 기능적 포인트 02 - 대나무 소재] -->
+<section class="py-24 px-6 bg-softGray">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
+<div class="w-full md:w-1/2 aspect-square product-img-box bg-white rounded-2xl border border-gray-100">
+<img alt="스승님 시그니처 골프티 대나무 소재 클로즈업 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/3.png"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-titleText mb-6 leading-tight">
+                    깔끔한 사용감을 위한<br/>대나무 소재
+                </h2>
+<p class="text-lg leading-relaxed text-gray-600 mb-6">
+                    가볍고 정돈된 인상의 대나무 골프티로 필드 위에서도 부담 없이 사용할 수 있습니다
+                </p>
+<p class="text-lg leading-relaxed text-gray-600">
+                    슬림한 바디와 매끄러운 표면감으로 라운드 준비물까지 깔끔하게 맞추고 싶은 골퍼에게 적합합니다
+                </p>
+</div>
+</div>
+</section>
+<!-- [SECTION 6: 제품 디테일 01 - 로고 / 컬러 연출컷] -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 aspect-[4/5] product-img-box rounded-2xl">
+<img alt="스승님 시그니처 골프티 로고와 컬러 연출컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/4.png"/>
+<span class="product-img-note">
+                    ※ 일부 이미지 내 소품은 연출용입니다
+                </span>
+</div>
+<div class="w-full md:w-1/2">
+<div class="mb-12">
+<span class="text-mainBlue font-bold text-lg mb-3 block">POINT 01 선명한 스승님 로고 인쇄</span>
+<p class="text-xl leading-relaxed text-titleText">
+                        딥블루와 화이트 컬러 위에 스승님 로고를 선명하게 적용해 브랜드의 시그니처 무드를 완성했습니다
+                    </p>
+</div>
+<div>
+<span class="text-mainBlue font-bold text-lg mb-3 block">POINT 02 통일감 있는 스타일링</span>
+<p class="text-xl leading-relaxed text-titleText">
+                        필드 위에서도 깔끔하고 정돈된 느낌을 주는 스승님만의 컬러 밸런스를 담았습니다
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 7: 제품 디테일 02 - 형태 / 구조 / 바디 밸런스] -->
+<section class="py-24 px-6 bg-softGray">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
+<div class="w-full md:w-1/2 aspect-square product-img-box bg-white rounded-2xl border border-gray-100">
+<img alt="스승님 시그니처 골프티 형태와 바디 밸런스 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/5.png"/>
+</div>
+<div class="w-full md:w-1/2">
+<div class="mb-12">
+<span class="text-mainBlue font-bold text-lg mb-3 block">POINT 03 안정적인 83mm 길이</span>
+<p class="text-xl leading-relaxed text-titleText">
+                        롱티 타입의 83mm 길이로 드라이버 티샷 시 여유 있는 세팅이 가능합니다
+                    </p>
+</div>
+<div>
+<span class="text-mainBlue font-bold text-lg mb-3 block">POINT 04 정돈된 바디 밸런스</span>
+<p class="text-xl leading-relaxed text-titleText">
+                        슬림하고 깔끔한 실루엣으로 필드 위에서도 세련된 인상을 더합니다
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 8: 현장감 연출 GIF 섹션] -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-titleText mb-8">필드 위에서 자연스럽게 쓰이는 순간</h2>
+<p class="text-lg text-gray-600 leading-relaxed mb-12">
+                골프티는 과장된 설명보다 실제 라운드에서의 사용 장면이 중요합니다
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left mb-14">
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6">
+<span class="text-mainBlue font-black text-sm">01 드라이버 티샷 전</span>
+<h3 class="text-xl font-black text-titleText mt-3 mb-2">여유 있는 높이 세팅</h3>
+<p class="text-gray-600 leading-relaxed">83mm 롱티로 드라이버 티샷 전 안정적인 티 높이 세팅을 돕습니다</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6">
+<span class="text-mainBlue font-black text-sm">02 잔디 위에서</span>
+<h3 class="text-xl font-black text-titleText mt-3 mb-2">선명한 컬러 시인성</h3>
+<p class="text-gray-600 leading-relaxed">화이트와 딥블루 컬러로 잔디 위에서도 깔끔하게 눈에 들어옵니다</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6">
+<span class="text-mainBlue font-black text-sm">03 라운드 준비물로</span>
+<h3 class="text-xl font-black text-titleText mt-3 mb-2">실속 있는 50개입</h3>
+<p class="text-gray-600 leading-relaxed">라운딩 가방에 넣어두기 좋은 50개입 실속 구성으로 부담 없이 사용할 수 있습니다</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<div class="aspect-video product-img-box rounded-2xl mb-6 shadow-sm border border-gray-100">
+<img alt="스승님 시그니처 골프티 세팅 클로즈업 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/7.png"/>
+</div>
+<h3 class="text-xl font-bold text-titleText mb-2">흔들림 없이 깔끔한 세팅</h3>
+</div>
+<div>
+<div class="aspect-video product-img-box rounded-2xl mb-6 shadow-sm border border-gray-100">
+<img alt="스승님 시그니처 골프티 임팩트 연출 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/8.png"/>
+</div>
+<h3 class="text-xl font-bold text-titleText mb-2">군더더기 없는 깔끔한 임팩트</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 9: 50개입 실속 구성 강조] -->
+<section class="py-24 px-6 bg-pointNavy text-white">
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+<div>
+<span class="text-goldAccent font-bold tracking-widest text-sm block mb-4">MAIN VALUE PACK</span>
+<h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                    라운딩 가방에 넣어두기 좋은<br/>50개입 실속 구성
+                </h2>
+<p class="text-lg text-gray-200 leading-relaxed mb-6">
+                    50개입은 가격 부담을 낮추면서도 필드, 연습장, 동반자와의 라운드까지 여유 있게 사용할 수 있는 현실적인 구성입니다
+                </p>
+<p class="text-lg text-gray-200 leading-relaxed">
+                    가볍게 써보고 싶은 골퍼는 20개입, 모임·선물·프로샵 용도는 100개입 또는 대량 구매로 안내할 수 있습니다
+                </p>
+</div>
+<div class="bg-white/8 border border-white/10 rounded-3xl p-8">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 rounded-2xl p-6 text-center">
+<p class="text-4xl font-black text-goldAccent mb-2">50</p>
+<p class="font-bold">개입 메인팩</p>
+</div>
+<div class="bg-white/10 rounded-2xl p-6 text-center">
+<p class="text-4xl font-black text-goldAccent mb-2">9,900</p>
+<p class="font-bold">출시 특가</p>
+</div>
+<div class="bg-white/10 rounded-2xl p-6 text-center">
+<p class="text-4xl font-black text-goldAccent mb-2">83</p>
+<p class="font-bold">mm 롱티</p>
+</div>
+<div class="bg-white/10 rounded-2xl p-6 text-center">
+<p class="text-4xl font-black text-goldAccent mb-2">2</p>
+<p class="font-bold">컬러 믹스</p>
+</div>
+</div>
+<div class="mt-6 bg-white/10 rounded-2xl p-5 text-sm text-gray-200 leading-relaxed">
+                    12,900원은 메인 가격이 아니라 배송비 포함 옵션으로 안내하는 구조가 자연스럽습니다
+                </div>
+</div>
+</div>
+</section>
+<!-- [SECTION 10: 소재 / 컬러 강조 섹션] -->
+<section class="py-24 px-6 bg-softGray">
+<div class="max-w-4xl mx-auto space-y-24 text-center">
+<div>
+<div class="w-full aspect-[21/9] product-img-box bg-white rounded-2xl mb-8 border border-gray-100">
+<img alt="스승님 시그니처 골프티 대나무 소재 단독 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/9.png"/>
+</div>
+<h3 class="text-2xl font-bold text-titleText mb-4">대나무 소재로 완성한 깔끔한 사용감</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                    가볍고 정돈된 인상의 대나무 골프티로<br/>라운드 준비까지 더 깔끔하게
+                </p>
+</div>
+<div>
+<div class="w-full aspect-[21/9] product-img-box bg-white rounded-2xl mb-8 border border-gray-100">
+<img alt="스승님 시그니처 골프티 화이트와 딥블루 컬러 대비 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/10.png"/>
+</div>
+<h3 class="text-2xl font-bold text-titleText mb-4">화이트 &amp; 딥블루의 시그니처 컬러 조합</h3>
+<p class="text-lg text-gray-600 leading-relaxed">
+                    잔디 위에서도 선명하게 보이는<br/>스승님만의 감각적인 컬러 밸런스
+                </p>
+</div>
+</div>
+</section>
+<!-- [SECTION 11: 타사 나무티와 비교] -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-bold text-center text-titleText mb-16">타사 나무티와 다른 점</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- 타사 나무티 -->
+<div class="bg-gray-50 p-10 rounded-2xl border border-gray-200 h-full flex flex-col">
+<h3 class="text-xl font-bold text-gray-500 text-center mb-8 pb-4 border-b border-gray-200">타사 기본 나무티</h3>
+<ul class="space-y-5 flex-grow">
+<li class="flex items-start text-gray-500 text-lg">
+<i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
+                            브랜드 구분이 어려운 기본형 구성
+                        </li>
+<li class="flex items-start text-gray-500 text-lg">
+<i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
+                            라운드 준비물로는 다소 밋밋한 인상
+                        </li>
+<li class="flex items-start text-gray-500 text-lg">
+<i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
+                            컬러 선택이나 시인성에서 아쉬운 느낌
+                        </li>
+<li class="flex items-start text-gray-500 text-lg">
+<i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
+                            잔디 위에서 눈에 잘 띄지 않을 수 있는 컬러
+                        </li>
+<li class="flex items-start text-gray-500 text-lg">
+<i class="fa-solid fa-minus mt-1.5 mr-4 text-gray-400 text-sm"></i>
+                            선물이나 단체 굿즈로 쓰기에는 약한 완성도
+                        </li>
+</ul>
+</div>
+<!-- 스승님 티 -->
+<div class="bg-white p-10 rounded-2xl border-2 border-mainBlue shadow-[0_10px_30px_rgba(0,51,153,0.1)] h-full flex flex-col">
+<h3 class="text-xl font-bold text-mainBlue text-center mb-8 pb-4 border-b border-gray-100">스승님 시그니처 롱티</h3>
+<ul class="space-y-5 flex-grow">
+<li class="flex items-start text-titleText font-medium text-lg">
+<i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
+                            드라이버 티샷용 83mm 롱티 타입
+                        </li>
+<li class="flex items-start text-titleText font-medium text-lg">
+<i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
+                            가볍고 정돈된 대나무 소재
+                        </li>
+<li class="flex items-start text-titleText font-medium text-lg">
+<i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
+                            화이트와 딥블루 컬러 믹스
+                        </li>
+<li class="flex items-start text-titleText font-medium text-lg">
+<i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
+                            잔디 위에서 보기 쉬운 선명한 시인성
+                        </li>
+<li class="flex items-start text-titleText font-medium text-lg">
+<i class="fa-solid fa-check mt-1.5 mr-4 text-mainBlue text-base"></i>
+                            스승님 로고가 들어간 브랜드 굿즈 무드
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 12: 짧은 사용 후기] -->
+<section class="py-24 px-6 bg-pointNavy text-white">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-14">
+<span class="text-goldAccent text-sm font-bold tracking-widest block mb-4">REAL USER VOICE</span>
+<h2 class="text-3xl md:text-4xl font-bold">짧은 사용 후기</h2>
+<p class="text-blue-100 mt-4 leading-relaxed">라운드 준비물로 실제 사용했을 때 바로 느껴지는 포인트를 짧게 정리했습니다</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">파란색이 섞여 있어서 잔디 위에서 찾기 편했습니다</p>
+<p class="text-blue-100 text-sm mt-5">라운드 사용 후기</p>
+</div>
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">83mm라 드라이버 티샷할 때 높이 잡기가 편했습니다</p>
+<p class="text-blue-100 text-sm mt-5">드라이버 티샷용 후기</p>
+</div>
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">화이트랑 딥블루 조합이 깔끔해서 일반 티보다 예뻐 보입니다</p>
+<p class="text-blue-100 text-sm mt-5">컬러 만족 후기</p>
+</div>
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">골프백에 넣어두기 좋고 동반자한테 나눠주기도 부담 없습니다</p>
+<p class="text-blue-100 text-sm mt-5">실속 구성 후기</p>
+</div>
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">로고가 있어서 단체 라운드 선물용으로도 괜찮아 보입니다</p>
+<p class="text-blue-100 text-sm mt-5">선물용 후기</p>
+</div>
+<div class="bg-white/7 border border-white/10 rounded-2xl p-6">
+<p class="text-goldAccent text-lg mb-3">“</p>
+<p class="text-gray-100 leading-relaxed font-medium">가격이 부담스럽지 않아서 라운딩팩으로 쓰기 좋았습니다</p>
+<p class="text-blue-100 text-sm mt-5">가격 만족 후기</p>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 13: 추천 대상] -->
+<!-- [SECTION 12: 추천 대상] -->
+<section class="py-24 px-6 bg-softGray">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-2xl md:text-3xl font-bold text-center text-titleText mb-10">이런 골퍼에게 추천합니다</h2>
+<ul class="space-y-4">
+<li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
+<i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
+<span class="text-lg text-titleText font-medium">롱 83mm 골프티를 선호하는 골퍼</span>
+</li>
+<li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
+<i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
+<span class="text-lg text-titleText font-medium">라운드 준비물도 깔끔하게 맞추고 싶은 골퍼</span>
+</li>
+<li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
+<i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
+<span class="text-lg text-titleText font-medium">브랜드 감성이 담긴 골프 소품을 찾는 골퍼</span>
+</li>
+<li class="bg-white p-6 rounded-xl flex items-center shadow-sm border border-gray-100">
+<i class="fa-solid fa-check text-mainBlue text-xl mr-5"></i>
+<span class="text-lg text-titleText font-medium">스승님 시그니처 굿즈를 사용해보고 싶은 골퍼</span>
+</li>
+</ul>
+<div class="mt-12 bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm">
+<p class="text-mainBlue font-black mb-2">문의 안내</p>
+<p class="text-titleText font-bold leading-relaxed">자세한 문의는 카카오톡에서 “스승님”을 검색해주세요</p>
+</div>
+</div>
+</section>
+<!-- [SECTION 13: 선물 / 단체 구매 추천] -->
+<section class="py-24 px-6 bg-white" id="bulk-buy">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-14">
+<span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">GIFT &amp; BULK ORDER</span>
+<h2 class="text-3xl md:text-4xl font-bold text-titleText leading-tight">이런 용도로도 좋습니다</h2>
+<p class="text-lg text-gray-600 mt-5 leading-relaxed">
+                    개인 사용뿐 아니라 골프 모임, 레슨, 프로샵, 사은품 용도로도 활용할 수 있습니다
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
+<i class="fa-solid fa-users text-mainBlue text-2xl mb-4"></i>
+<p class="text-titleText font-black leading-snug">골프 모임<br/>단체 선물</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
+<i class="fa-solid fa-gift text-mainBlue text-2xl mb-4"></i>
+<p class="text-titleText font-black leading-snug">레슨생<br/>증정용 굿즈</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
+<i class="fa-solid fa-store text-mainBlue text-2xl mb-4"></i>
+<p class="text-titleText font-black leading-snug">프로샵<br/>판매용 소품</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
+<i class="fa-solid fa-golf-ball-tee text-mainBlue text-2xl mb-4"></i>
+<p class="text-titleText font-black leading-snug">스크린골프장<br/>연습장 사은품</p>
+</div>
+<div class="bg-softGray border border-gray-100 rounded-2xl p-6 text-center">
+<i class="fa-solid fa-building text-mainBlue text-2xl mb-4"></i>
+<p class="text-titleText font-black leading-snug">기업 라운드<br/>기념품</p>
+</div>
+</div>
+<div class="mt-10 bg-mainBlue rounded-2xl p-8 md:p-10 text-white text-center">
+<h3 class="text-2xl font-black mb-3">대량 구매 문의 안내</h3>
+<p class="text-blue-100 leading-relaxed">골프 모임, 프로샵, 레슨생 선물, 기업 라운드 기념품 등 대량 구매는 스승님 공식 카카오톡 채널로 문의해주세요</p>
+<div class="mt-6 bg-white/10 border border-white/15 rounded-xl p-5">
+<p class="text-sm text-goldAccent font-black tracking-widest mb-2">KAKAO CHANNEL</p>
+<p class="text-xl font-black">카카오톡에서 “스승님” 검색</p>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 14: 제품 구성 / 스펙 안내 & SECTION 15: 상세안내 박스] -->
+<section class="py-20 px-6 border-t border-gray-200">
+<div class="max-w-4xl mx-auto">
+<h3 class="text-2xl font-bold text-titleText mb-8">제품 구성 안내</h3>
+<!-- 제품 구성 컷 -->
+<div class="w-full aspect-video product-img-box bg-white rounded-2xl mb-10 border border-gray-100">
+<img alt="스승님 시그니처 골프티 판매 옵션 제품 구성 컷" loading="lazy" src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/10.png"/>
+</div>
+<!-- 제품 스펙 테이블 -->
+<div class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-12">
+<table class="w-full text-left text-sm md:text-base">
+<tbody>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold w-1/3">제품명</th>
+<td class="py-5 pl-8 text-bodyText">스승님 시그니처 골프티 롱83mm 50개입</td>
+</tr>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">브랜드</th>
+<td class="py-5 pl-8 text-bodyText">스승님</td>
+</tr>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">소재</th>
+<td class="py-5 pl-8 text-bodyText">대나무</td>
+</tr>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">구성품</th>
+<td class="py-5 pl-8 text-bodyText font-medium text-mainBlue">골프티 50개입 기본 / 20개입·100개입 옵션</td>
+</tr>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">판매가</th>
+<td class="py-5 pl-8 text-bodyText">50개입 실속팩 9,900원 / 50개입 무료배송팩 12,900원 / 100개입 대용량팩 16,900원</td>
+</tr>
+<tr class="border-b border-gray-100">
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">길이</th>
+<td class="py-5 pl-8 text-bodyText">83mm</td>
+</tr>
+<tr>
+<th class="py-5 pl-8 bg-softGray text-titleText font-bold">무게</th>
+<td class="py-5 pl-8 text-bodyText">1.5g</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- 꼭 확인해주세요 박스 -->
+<div class="bg-softGray border border-gray-200 p-8 md:p-10 rounded-xl mb-12">
+<h4 class="text-xl font-bold text-titleText mb-6">꼭 확인해주세요!</h4>
+<ul class="list-disc list-outside ml-5 space-y-3 text-base text-gray-600">
+<li>해당 이미지는 해상도 및 실내 조도에 따라 실제 색상과 차이가 있을 수 있습니다</li>
+<li>제품 사양은 품질 향상 및 제조사 사정에 따라 예고 없이 변경될 수 있습니다</li>
+<li>제품 특성상 공정 과정에서 발생한 미세한 스크래치, 기포, 얼룩, 찍힘이 있을 수 있습니다</li>
+<li class="font-medium text-mainBlue">일부 이미지 내 소품은 연출용이며, 실제 구성품은 선택한 판매 옵션에 따라 달라집니다</li>
+</ul>
+</div>
+<!-- FAQ -->
+<div class="mt-16">
+<h3 class="text-2xl font-bold text-titleText mb-8">자주 묻는 질문</h3>
+<div class="space-y-4">
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 83mm는 어떤 골퍼에게 맞나요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">드라이버 티샷용 롱티를 선호하는 골퍼에게 적합합니다</p>
+</details>
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 어떤 구성이 메인 상품인가요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">메인 상품은 50개입 실속팩 9,900원입니다 배송비 포함으로 구매하고 싶은 경우 50개입 무료배송팩 12,900원 옵션을 선택할 수 있습니다</p>
+</details>
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 색상은 어떻게 구성되나요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">화이트와 딥블루 컬러로 구성됩니다 실제 구성 비율은 판매 옵션에 따라 안내됩니다</p>
+</details>
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 소재는 무엇인가요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">대나무 소재로 제작되었습니다</p>
+</details>
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 사용 후 교환/반품이 가능한가요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">제품 특성상 사용 흔적이 있거나 상품 가치가 훼손된 경우 교환/반품이 제한될 수 있습니다</p>
+</details>
+<details class="faq-card bg-white border border-gray-200 rounded-xl p-6">
+<summary class="cursor-pointer flex items-center justify-between font-bold text-titleText">
+                            Q 대량 구매도 가능한가요?
+                            <i class="fa-solid fa-chevron-down text-mainBlue ml-4"></i>
+</summary>
+<p class="text-gray-600 leading-relaxed mt-4">골프 모임, 프로샵, 레슨생 선물용 대량 구매는 스승님 공식 카카오톡 채널로 문의해주세요</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 16: 배송 / 교환 / 반품 / 고객센터] -->
+<section class="py-16 px-6 bg-gray-50 border-t border-gray-200" id="contact-info">
+<div class="max-w-4xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-gray-500">
+<div>
+<h5 class="font-bold text-gray-700 text-base mb-4">배송/교환/반품 안내</h5>
+<ul class="space-y-2 list-disc list-inside">
+<li>배송 일정은 주문 및 택배사 사정에 따라 달라질 수 있습니다</li>
+<li>단순 변심에 의한 교환/반품은 수령 후 7일 이내 접수 가능합니다</li>
+<li>사용 흔적이 있거나 상품 가치가 훼손된 경우 교환/반품이 제한될 수 있습니다</li>
+<li>자세한 문의는 카카오톡에서 “스승님”을 검색해주세요</li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-gray-700 text-base mb-4">고객센터</h5>
+<ul class="space-y-2 bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+<li class="flex justify-between border-b border-gray-50 pb-2"><span class="font-medium">운영시간</span> <span>평일 10:00 - 17:00</span></li>
+<li class="flex justify-between border-b border-gray-50 py-2"><span class="font-medium">점심시간</span> <span>12:00 - 13:00</span></li>
+<li class="flex justify-between pt-2"><span class="font-medium">휴무</span> <span>주말 / 공휴일 휴무</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- [SECTION 17: 최종 안내 문구] -->
+<section class="py-20 px-6 bg-white border-t border-gray-200">
+<div class="max-w-4xl mx-auto text-center">
+<span class="text-mainBlue font-bold tracking-widest text-sm block mb-4">SEUSEUNGNIM SIGNATURE TEE</span>
+<h2 class="text-3xl md:text-4xl font-black text-titleText leading-tight mb-5">
+                출시 특가 9,900원
+            </h2>
+<p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                준비 수량 소진 시 조기 완판될 수 있으니 빠르게 확인해주세요
+            </p>
+<div class="bg-pointNavy text-white rounded-2xl p-7 md:p-9 max-w-2xl mx-auto">
+<p class="text-sm text-goldAccent font-black tracking-widest mb-3">구매 및 문의 안내</p>
+<p class="text-xl md:text-2xl font-black leading-tight">자세한 문의는 카카오톡에서 “스승님”을 검색해주세요</p>
+<p class="text-blue-100 mt-4 leading-relaxed">재고, 구성, 대량 구매, 배송 관련 안내는 스승님 공식 카카오톡 채널에서 확인할 수 있습니다</p>
+</div>
+</div>
+</section>
+</div>
+</div></body>
 
-</body>
 </html>
