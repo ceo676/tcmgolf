@@ -1498,6 +1498,212 @@
             }
         }
 
+
+        /* =========================================================
+           BAMBOO DURABILITY ADDON · images/25.png
+           기존 내용 유지 + 대나무 내구성 강조 섹션 추가
+           ========================================================= */
+        .bamboo-durability-section {
+            position: relative;
+            overflow: hidden;
+            padding: 86px 30px !important;
+            background:
+                radial-gradient(circle at 96% 4%, rgba(0, 51, 153, 0.10), transparent 28%),
+                linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+            border-top: 1px solid #E8EDF5;
+            border-bottom: 1px solid #E8EDF5;
+        }
+
+        .bamboo-durability-inner {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .bamboo-durability-head {
+            margin-bottom: 28px;
+        }
+
+        .bamboo-durability-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: #EEF4FF;
+            border: 1px solid rgba(0, 51, 153, 0.12);
+            color: #003399;
+            font-size: 13px !important;
+            line-height: 1.2 !important;
+            font-weight: 950;
+            letter-spacing: 0.08em !important;
+        }
+
+        .bamboo-durability-kicker i {
+            color: #003399;
+            font-size: 14px !important;
+        }
+
+        .landing-container .bamboo-durability-title {
+            margin: 0 !important;
+            color: #111111;
+            font-size: 39px !important;
+            line-height: 1.19 !important;
+            letter-spacing: -0.055em !important;
+            font-weight: 950 !important;
+        }
+
+        .bamboo-durability-title strong {
+            color: #003399;
+            font-weight: 950;
+        }
+
+        .landing-container .bamboo-durability-desc {
+            margin: 17px 0 0 !important;
+            color: #5F6977 !important;
+            font-size: 18px !important;
+            line-height: 1.68 !important;
+            letter-spacing: -0.025em !important;
+            font-weight: 650;
+        }
+
+        .bamboo-durability-media {
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(0, 51, 153, 0.12);
+            border-radius: 30px;
+            background: #ffffff;
+            box-shadow: 0 22px 52px rgba(0, 51, 153, 0.10);
+        }
+
+        .bamboo-durability-media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        .bamboo-durability-points {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 13px;
+            margin-top: 22px;
+        }
+
+        .bamboo-durability-point {
+            padding: 19px 15px 18px;
+            border: 1px solid #E3E8F1;
+            border-radius: 22px;
+            background: #ffffff;
+            box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
+        }
+
+        .bamboo-durability-point i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            margin-bottom: 11px;
+            border-radius: 12px;
+            background: #EEF4FF;
+            color: #003399;
+            font-size: 16px !important;
+        }
+
+        .landing-container .bamboo-durability-point strong {
+            display: block;
+            color: #111111;
+            font-size: 18px !important;
+            line-height: 1.32 !important;
+            letter-spacing: -0.035em !important;
+            font-weight: 950;
+        }
+
+        .landing-container .bamboo-durability-point span {
+            display: block;
+            margin-top: 6px;
+            color: #6B7280;
+            font-size: 14px !important;
+            line-height: 1.45 !important;
+            letter-spacing: -0.02em !important;
+            font-weight: 650;
+        }
+
+        .bamboo-durability-message {
+            margin-top: 22px;
+            padding: 25px 24px;
+            border-radius: 26px;
+            background: linear-gradient(135deg, #071A33 0%, #003399 100%);
+            color: #ffffff;
+            box-shadow: 0 18px 40px rgba(7, 26, 51, 0.16);
+        }
+
+        .landing-container .bamboo-durability-message p {
+            margin: 0 !important;
+            color: #ffffff !important;
+            font-size: 24px !important;
+            line-height: 1.38 !important;
+            letter-spacing: -0.04em !important;
+            font-weight: 950;
+        }
+
+        .landing-container .bamboo-durability-message small {
+            display: block;
+            margin-top: 9px;
+            color: rgba(255,255,255,0.70);
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            letter-spacing: -0.015em !important;
+            font-weight: 650;
+        }
+
+        @media (max-width: 580px) {
+            .bamboo-durability-section {
+                padding: 64px 22px !important;
+            }
+
+            .landing-container .bamboo-durability-title {
+                font-size: 30px !important;
+                line-height: 1.25 !important;
+            }
+
+            .landing-container .bamboo-durability-desc {
+                font-size: 15.5px !important;
+                line-height: 1.65 !important;
+            }
+
+            .bamboo-durability-media {
+                border-radius: 22px;
+                box-shadow: 0 14px 34px rgba(0, 51, 153, 0.08);
+            }
+
+            .bamboo-durability-points {
+                grid-template-columns: 1fr;
+                gap: 11px;
+            }
+
+            .bamboo-durability-point {
+                display: flex;
+                align-items: flex-start;
+                gap: 13px;
+                padding: 17px 16px;
+            }
+
+            .bamboo-durability-point i {
+                flex: 0 0 34px;
+                margin-bottom: 0;
+            }
+
+            .landing-container .bamboo-durability-message p {
+                font-size: 21px !important;
+            }
+        }
+
+
     </style>
 </head>
 <body class="antialiased text-bodyText">
@@ -1637,6 +1843,64 @@
 <p class="text-sm md:text-base text-blue-100 mt-3 leading-relaxed">30개는 5,900원, 50개는 9,900원, 100개는 20,900원 무료배송, 150개는 29,900원 무료배송으로 선택할 수 있습니다</p>
 </div>
 </div>
+</section>
+
+
+<!-- [ADDED SECTION: 대나무 소재 내구성 강조 · images/25.png] -->
+<section class="bamboo-durability-section" id="bamboo-durability">
+    <div class="bamboo-durability-inner">
+        <div class="bamboo-durability-head">
+            <span class="bamboo-durability-kicker">
+                <i class="fa-solid fa-leaf"></i>
+                BAMBOO MATERIAL
+            </span>
+            <h2 class="bamboo-durability-title">
+                쉽게 부러지지 않는<br/>
+                <strong>천연 대나무 롱티</strong>
+            </h2>
+            <p class="bamboo-durability-desc">
+                가볍지만 탄탄한 대나무 소재로 만든 스승님 83mm 롱티입니다.
+                드라이버 티샷 전 안정적인 세팅감과 깔끔한 사용감을 함께 담았습니다.
+            </p>
+        </div>
+
+        <div class="bamboo-durability-media">
+            <img
+                src="https://raw.githubusercontent.com/ceo676/tcmgolf/main/images/25.png"
+                alt="쉽게 부러지지 않는 천연 대나무 소재 스승님 83mm 롱티"
+                loading="lazy"
+            />
+        </div>
+
+        <div class="bamboo-durability-points">
+            <div class="bamboo-durability-point">
+                <i class="fa-solid fa-tree"></i>
+                <div>
+                    <strong>천연 대나무 소재</strong>
+                    <span>가볍고 탄탄한 나무티 사용감</span>
+                </div>
+            </div>
+            <div class="bamboo-durability-point">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <strong>쉽게 부러지지 않는 느낌</strong>
+                    <span>정타에는 오래가는 실속형 롱티</span>
+                </div>
+            </div>
+            <div class="bamboo-durability-point">
+                <i class="fa-solid fa-golf-ball-tee"></i>
+                <div>
+                    <strong>드라이버 티샷용 83mm</strong>
+                    <span>라운드 전 여유 있는 티 세팅</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bamboo-durability-message">
+            <p>정타에는 오래가고,<br/>미스샷엔 솔직하게 반응하는 티</p>
+            <small>화이트 & 딥블루 컬러와 선명한 스승님 로고로 필드 위에서도 깔끔하게 보입니다.</small>
+        </div>
+    </div>
 </section>
 
 <!-- [IMAGE SECTION: 100개 실속팩 가격 비교 · images/23.png] -->
