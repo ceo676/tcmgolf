@@ -781,6 +781,403 @@
             .clean-pack strong { font-size: 22px; }
         }
 
+
+        /* =========================================================
+           VALUE PACK PRICE COMPARISON
+           상세페이지용 100개 실속팩 가격 비교 블록
+           기존 브랜드 컬러: #003399 / #071A33 / #C8A45D
+           ========================================================= */
+        .value-compare-section {
+            position: relative;
+            overflow: hidden;
+            padding: 92px 30px !important;
+            background:
+                radial-gradient(circle at 100% 0%, rgba(0, 51, 153, 0.10), transparent 34%),
+                linear-gradient(180deg, #FFFFFF 0%, #F7F9FD 100%);
+            border-top: 1px solid #E8EDF5;
+            border-bottom: 1px solid #E8EDF5;
+        }
+
+        .value-compare-section::before {
+            content: '';
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -150px;
+            bottom: -150px;
+            border-radius: 50%;
+            border: 48px solid rgba(0, 51, 153, 0.035);
+            pointer-events: none;
+        }
+
+        .value-compare-inner {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .value-compare-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 auto 16px;
+            padding: 9px 15px;
+            border: 1px solid rgba(0, 51, 153, 0.14);
+            border-radius: 999px;
+            background: #EEF4FF;
+            color: #003399;
+            font-size: 13px !important;
+            line-height: 1.2 !important;
+            font-weight: 950;
+            letter-spacing: 0.04em !important;
+        }
+
+        .value-compare-head {
+            text-align: center;
+        }
+
+        .landing-container .value-compare-title {
+            margin: 0 !important;
+            color: #111111;
+            font-size: 38px !important;
+            line-height: 1.22 !important;
+            letter-spacing: -0.05em !important;
+            font-weight: 950 !important;
+        }
+
+        .value-compare-title strong {
+            color: #003399;
+            font-weight: 950;
+        }
+
+        .landing-container .value-compare-subtitle {
+            margin: 17px 0 0 !important;
+            color: #6B7280 !important;
+            font-size: 17px !important;
+            line-height: 1.65 !important;
+            letter-spacing: -0.025em !important;
+            font-weight: 650;
+        }
+
+        .value-compare-cards {
+            position: relative;
+            display: flex !important;
+            align-items: stretch !important;
+            gap: 18px !important;
+            margin-top: 40px;
+        }
+
+        .value-compare-card {
+            position: relative;
+            flex: 1 1 0;
+            min-width: 0;
+            padding: 30px 24px 27px;
+            border-radius: 26px;
+            text-align: center;
+        }
+
+        .value-compare-card.standard {
+            border: 1.5px solid #DDE3EC;
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 14px 34px rgba(17, 24, 39, 0.05);
+        }
+
+        .value-compare-card.best {
+            border: 2px solid #003399;
+            background: #FFFFFF;
+            box-shadow: 0 20px 46px rgba(0, 51, 153, 0.15);
+        }
+
+        .value-best-ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 9px 17px;
+            border-radius: 0 23px 0 18px;
+            background: #003399;
+            color: #FFFFFF;
+            font-size: 12px !important;
+            line-height: 1.2 !important;
+            font-weight: 950;
+            letter-spacing: 0.08em !important;
+        }
+
+        .value-card-kicker {
+            display: block;
+            margin-bottom: 7px;
+            color: #8A94A3;
+            font-size: 12px !important;
+            line-height: 1.2 !important;
+            font-weight: 900;
+            letter-spacing: 0.08em !important;
+        }
+
+        .value-compare-card.best .value-card-kicker {
+            color: #003399;
+        }
+
+        .landing-container .value-card-title {
+            margin: 0 !important;
+            color: #202938;
+            font-size: 23px !important;
+            line-height: 1.32 !important;
+            letter-spacing: -0.04em !important;
+            font-weight: 950 !important;
+        }
+
+        .value-compare-card.best .value-card-title {
+            color: #003399;
+        }
+
+        .value-card-rule {
+            width: 36px;
+            height: 3px;
+            margin: 22px auto;
+            border-radius: 999px;
+            background: #D9E0E8;
+        }
+
+        .value-compare-card.best .value-card-rule {
+            background: #C8A45D;
+        }
+
+        .value-price-lines {
+            min-height: 112px;
+        }
+
+        .landing-container .value-price-lines p {
+            margin: 0 0 8px !important;
+            color: #5F6977 !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            letter-spacing: -0.025em !important;
+            font-weight: 700;
+        }
+
+        .landing-container .value-price-lines p strong {
+            color: #111827;
+            font-weight: 950;
+        }
+
+        .value-shipping-row,
+        .value-free-shipping {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            margin-top: 8px;
+            font-size: 15px !important;
+            line-height: 1.2 !important;
+            font-weight: 900;
+        }
+
+        .value-shipping-row {
+            color: #555F6D;
+        }
+
+        .value-free-shipping {
+            padding: 8px 13px;
+            border: 1px solid rgba(0, 51, 153, 0.12);
+            border-radius: 999px;
+            background: #EEF4FF;
+            color: #003399;
+        }
+
+        .value-shipping-row i,
+        .value-free-shipping i {
+            font-size: 16px !important;
+        }
+
+        .value-total-label {
+            margin-top: 24px;
+            color: #8B95A3;
+            font-size: 13px !important;
+            line-height: 1.35 !important;
+            font-weight: 850;
+        }
+
+        .value-total-price {
+            margin-top: 7px;
+            color: #202938;
+            font-size: 39px !important;
+            line-height: 1 !important;
+            letter-spacing: -0.055em !important;
+            font-weight: 950;
+            white-space: nowrap;
+        }
+
+        .value-compare-card.best .value-total-price {
+            color: #003399;
+        }
+
+        .value-total-price .unit {
+            margin-left: 2px;
+            font-size: 23px !important;
+            font-weight: 900;
+        }
+
+        .value-vs {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border: 5px solid #F7F9FD;
+            border-radius: 50%;
+            background: #071A33;
+            color: #FFFFFF;
+            font-size: 14px !important;
+            line-height: 1 !important;
+            font-weight: 950;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 8px 20px rgba(7, 26, 51, 0.20);
+        }
+
+        .value-saving-box {
+            position: relative;
+            overflow: hidden;
+            margin-top: 24px;
+            padding: 29px 24px 27px;
+            border: 1px solid rgba(200, 164, 93, 0.50);
+            border-radius: 25px;
+            background: linear-gradient(135deg, #071A33 0%, #003399 100%);
+            color: #FFFFFF;
+            text-align: center;
+            box-shadow: 0 18px 40px rgba(7, 26, 51, 0.16);
+        }
+
+        .value-saving-box::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            top: -90px;
+            right: -24px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .landing-container .value-saving-small {
+            position: relative;
+            z-index: 1;
+            margin: 0 !important;
+            color: rgba(255, 255, 255, 0.76) !important;
+            font-size: 16px !important;
+            line-height: 1.45 !important;
+            font-weight: 750;
+        }
+
+        .landing-container .value-saving-main {
+            position: relative;
+            z-index: 1;
+            margin: 6px 0 0 !important;
+            color: #FFFFFF !important;
+            font-size: 31px !important;
+            line-height: 1.25 !important;
+            letter-spacing: -0.045em !important;
+            font-weight: 950;
+        }
+
+        .value-saving-main strong {
+            color: #F2CF79;
+            font-size: 44px !important;
+            font-weight: 950;
+        }
+
+        .value-benefit-row {
+            display: flex !important;
+            gap: 10px !important;
+            margin-top: 18px;
+        }
+
+        .value-benefit-item {
+            flex: 1 1 0;
+            padding: 15px 10px;
+            border: 1px solid #E0E6EF;
+            border-radius: 17px;
+            background: #FFFFFF;
+            color: #273244;
+            text-align: center;
+            font-size: 14px !important;
+            line-height: 1.4 !important;
+            font-weight: 850;
+        }
+
+        .value-benefit-item i {
+            display: block;
+            margin-bottom: 7px;
+            color: #003399;
+            font-size: 18px !important;
+        }
+
+        .landing-container .value-compare-note {
+            margin: 19px 0 0 !important;
+            color: #8A94A3 !important;
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+            text-align: center;
+        }
+
+        @media (max-width: 580px) {
+            .value-compare-section {
+                padding: 68px 22px !important;
+            }
+
+            .landing-container .value-compare-title {
+                font-size: 30px !important;
+            }
+
+            .landing-container .value-compare-subtitle {
+                font-size: 15px !important;
+            }
+
+            .value-compare-cards {
+                flex-direction: column !important;
+                gap: 14px !important;
+                margin-top: 30px;
+            }
+
+            .value-compare-card {
+                width: 100%;
+                padding: 27px 20px 24px;
+            }
+
+            .value-price-lines {
+                min-height: auto;
+            }
+
+            .value-vs {
+                top: 50%;
+                width: 46px;
+                height: 46px;
+                border-width: 4px;
+                font-size: 12px !important;
+            }
+
+            .value-total-price {
+                font-size: 37px !important;
+            }
+
+            .landing-container .value-saving-main {
+                font-size: 25px !important;
+            }
+
+            .value-saving-main strong {
+                font-size: 38px !important;
+            }
+
+            .value-benefit-row {
+                flex-direction: column !important;
+            }
+        }
+
     </style>
 </head>
 <body class="antialiased text-bodyText">
@@ -906,6 +1303,94 @@
 </div>
 </div>
 </section>
+
+<!-- [ADDED SECTION: 100개 실속팩 가격 비교] -->
+<section class="value-compare-section" id="value-pack-price-compare">
+    <div class="value-compare-inner">
+        <div class="value-compare-head">
+            <span class="value-compare-eyebrow">
+                <i class="fa-solid fa-tags"></i>
+                100개 실속팩 구매 혜택
+            </span>
+
+            <h2 class="value-compare-title">
+                따로 사는 것보다<br/>
+                <strong>100개 실속팩이 더 저렴해요</strong>
+            </h2>
+
+            <p class="value-compare-subtitle">
+                50개 2팩 가격에 배송비까지 더한<br/>
+                실제 총 결제금액으로 비교해 보세요
+            </p>
+        </div>
+
+        <div class="value-compare-cards">
+            <article class="value-compare-card standard">
+                <span class="value-card-kicker">INDIVIDUAL PURCHASE</span>
+                <h3 class="value-card-title">50개 2팩<br/>개별 구매 시</h3>
+                <div class="value-card-rule"></div>
+
+                <div class="value-price-lines">
+                    <p><strong>9,900원 × 2팩</strong></p>
+                    <p>상품금액 19,800원</p>
+                    <div class="value-shipping-row">
+                        <i class="fa-solid fa-truck"></i>
+                        배송비 3,000원
+                    </div>
+                </div>
+
+                <div class="value-total-label">배송비 포함 총 결제금액</div>
+                <div class="value-total-price">22,800<span class="unit">원</span></div>
+            </article>
+
+            <article class="value-compare-card best">
+                <span class="value-best-ribbon">BEST</span>
+                <span class="value-card-kicker">VALUE PACK</span>
+                <h3 class="value-card-title">100개<br/>실속팩 구매 시</h3>
+                <div class="value-card-rule"></div>
+
+                <div class="value-price-lines">
+                    <p><strong>화이트 + 딥블루</strong></p>
+                    <p>총 100개 구성</p>
+                    <div class="value-free-shipping">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        무료배송
+                    </div>
+                </div>
+
+                <div class="value-total-label">배송비 포함 총 결제금액</div>
+                <div class="value-total-price">19,900<span class="unit">원</span></div>
+            </article>
+
+            <div class="value-vs">VS</div>
+        </div>
+
+        <div class="value-saving-box">
+            <p class="value-saving-small">100개 실속팩으로 구매하면</p>
+            <p class="value-saving-main">총 <strong>2,900원</strong> 절약</p>
+        </div>
+
+        <div class="value-benefit-row">
+            <div class="value-benefit-item">
+                <i class="fa-solid fa-box-open"></i>
+                총 100개<br/>넉넉한 구성
+            </div>
+            <div class="value-benefit-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                배송비<br/>0원
+            </div>
+            <div class="value-benefit-item">
+                <i class="fa-solid fa-coins"></i>
+                개별 구매보다<br/>2,900원 절약
+            </div>
+        </div>
+
+        <p class="value-compare-note">
+            50개입 2팩 개별 구매 가격과 기본 배송비 3,000원을 기준으로 비교한 금액입니다.
+        </p>
+    </div>
+</section>
+
 <!-- [SECTION 2: 브랜드 무드] -->
 <section class="bg-softGray py-24 px-6 text-center">
 <div class="max-w-3xl mx-auto">
